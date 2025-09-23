@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://css1xn3e16274"]
+
+[ext_resource type="Texture2D" uid="uid://dujxatbqtnkdj" path="res://assets/background/background-mock.png" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://chdpute8p7qf3" path="res://scenes/globo-dialogo.tscn" id="2_kpi06"]
+[ext_resource type="PackedScene" uid="uid://ctomh4ymtd3gu" path="res://scenes/notes_sidebar.tscn" id="3_sugp2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="BackgroundMock" type="Sprite2D" parent="."]
+position = Vector2(582, 320)
+scale = Vector2(0.30493304, 0.30416667)
+texture = ExtResource("1_sugp2")
+
+[node name="GloboDialogo" parent="." instance=ExtResource("2_kpi06")]
+
+[node name="NotesPanel" parent="." instance=ExtResource("3_sugp2")]
+unique_name_in_owner = true

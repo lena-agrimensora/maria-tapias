@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctomh4ymtd3gu"]
+
+[ext_resource type="PackedScene" uid="uid://dagu1wdqntp3x" path="res://scenes/notes_button.tscn" id="1_icft5"]
+[ext_resource type="Script" uid="uid://dmbsj44srljtx" path="res://scripts/notes_sidebar.gd" id="1_kq1e7"]
+
+[node name="NotesPanel" type="CanvasLayer"]
+script = ExtResource("1_kq1e7")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = -1
+anchor_right = 0.18900001
+anchor_bottom = 0.86200005
+offset_right = -177.72801
+offset_bottom = -518.57605
+scale = Vector2(5.450465, 13.959999)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(0.138358, 0.041338116, 0.09168074, 1)
+anchors_preset = -1
+anchor_right = 0.18800001
+anchor_bottom = 0.836
+offset_right = 0.42399597
+offset_bottom = 0.27197266
+
+[node name="Notes_Button_Control" parent="." instance=ExtResource("1_icft5")]

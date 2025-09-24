@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://da51ctw7grwdt"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_2vdkp"]
+[ext_resource type="Script" uid="uid://crjryxbv4bp83" path="res://scripts/note_item.gd" id="1_okocb"]
 
 [node name="Note" type="HBoxContainer"]
 anchors_preset = -1
@@ -10,13 +10,12 @@ offset_right = 3.5039978
 offset_bottom = 6.1520004
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_okocb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-texture = SubResource("CanvasTexture_2vdkp")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-tooltip_text = "testttt"
 mouse_filter = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "testestest"

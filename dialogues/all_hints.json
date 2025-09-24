@@ -1,0 +1,14 @@
+{
+	"hints": [
+		{
+			"id": "horario_trasporte",
+			"display_value": "8 AM",
+			"tooltip": "El horario en que se tomó el transporte, justo una hora antes de su hora de ingreso."
+		},
+		{
+			"id": "lugar_trabajo",
+			"display_value": "Fabrica de embutidos",
+			"tooltip": "Chacinados ricos S.A., una fábrica que queda a 25 km de la casa del trabajador."
+		},
+	]
+}

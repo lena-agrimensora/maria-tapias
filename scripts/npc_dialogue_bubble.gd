@@ -1,22 +1,14 @@
 extends CanvasLayer
 class_name NPC_Dialogue_Bubble
 
-var bubble_text: String = "Ese día tomé el transporte a las [b][url=horario_trasporte]8 AM[/url][/b]. Estaba llegando tarde a la [b][url=lugar_trabajo]fabrica de embutidos[/url][/b]"
+var bubble_text: String = "Ese día tomé el transporte a las [b][url=horario_trasporte]8 AM[/url][/b]. Estaba llegando tarde a la [b][url=lugar_trabajo]fabrica de embutidos[/url][/b]."
 
-var hint_references : Dictionary = {
-	"horario_trasporte": {
-		"id": "horario_trasporte",
-		"display_value": "8 AM",
-		"tooltip": "El horario en que se tomo el trasporte, justo una hora antes de su hora de ingreso."
-	},
-	"lugar_trabajo": {
-		"id": "lugar_trabajo",
-		"display_value": "Fabrica de embutidos",
-		"tooltip": "Chacinados ricos S.A. una fabrica que queda a 25km de la casa del trabajador"
-	}
-}
+@export var dialogue : Dialogue
+
+var hint_references : Dictionary = {}
 
 @onready var notes_sidebar = %NotesPanel
+@onready var dialogue_manager : DialogueManager = %DialogueManager
 
 func _ready():
 	var rtl = $MarginContainer/RichTextLabel

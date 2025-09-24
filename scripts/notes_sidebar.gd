@@ -36,9 +36,9 @@ func add_note(ref: Dictionary) -> void:
 	#TODO: hardcodea un poco MENOS la referencia al label
 	var label = note_instance.get_child(1)
 	label.text = ref.display_value
-	label.tooltip_text = ref.tooltip
 	notes_list.add_child(note_instance)
 	note_instance.visible = notes_list.visible
+	note_instance.tooltip_txt = ref.tooltip
 	notes_button.modulate = Color(0.388, 0.523, 0.857, 1.0)
 	await get_tree().create_timer(0.3).timeout
 	notes_button.modulate = Color(1.0, 1.0, 1.0, 1.0)

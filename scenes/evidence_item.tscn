@@ -26,8 +26,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.99700004
 anchor_bottom = 1.029
-offset_right = -26.964844
-offset_bottom = 556.9669
+offset_top = -0.99999994
+offset_right = 1407.037
+offset_bottom = 555.9669
 scale = Vector2(0.20000058, 0.20000058)
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer"]

@@ -14,3 +14,7 @@ config/name="Maria Tapias - Contratos y Palabras"
 run/main_scene="uid://css1xn3e16274"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Dialogue_Container="*res://scripts/dialogue_container.gd"

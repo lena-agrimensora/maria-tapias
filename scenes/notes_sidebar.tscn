@@ -18,21 +18,22 @@ script = ExtResource("1_kq1e7")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = -1
-anchor_right = 0.23
+anchor_right = 0.25100002
 anchor_bottom = 0.86200005
-offset_right = -216.34029
+offset_right = -236.129
 offset_bottom = -518.57605
 scale = Vector2(5.450465, 13.959999)
 theme_override_styles/panel = SubResource("StyleBoxFlat_kq1e7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-modulate = Color(0.138358, 0.041338116, 0.09168074, 1)
 anchors_preset = -1
-anchor_top = 0.006
-anchor_right = 0.21000001
+anchor_left = 0.011000001
+anchor_top = 0.043
+anchor_right = 0.23500001
 anchor_bottom = 0.836
-offset_top = 0.11199999
-offset_right = 0.07998657
+offset_left = 0.32799911
+offset_top = 0.13599968
+offset_right = 0.27996826
 offset_bottom = 0.27197266
 
 [node name="Notes_Button_Control" parent="." instance=ExtResource("1_icft5")]

@@ -1,0 +1,10 @@
+{
+	"dialogues": [
+		{
+			"id": "pepe_1",
+			"character": "Pepe",
+			"display_text": "Ese día tomé el transporte a las [b][url=horario_trasporte]8 AM[/url][/b]. Estaba llegando tarde a la [b][url=lugar_trabajo]fabrica de embutidos[/url][/b].",
+			"hint_ids": ["horario_trasporte", "lugar_trabajo"]
+		},
+	]
+}

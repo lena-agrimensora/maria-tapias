@@ -27,6 +27,7 @@ func _on_evidence_button_pressed() -> void:
 			"tooltip": desc_label.text
 		}
 		notes_panel.add_note(ref)
+	_on_button_exited()
 	queue_free()
 	pass
 	

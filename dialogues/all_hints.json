@@ -10,5 +10,20 @@
 			"display_value": "Fabrica de embutidos",
 			"tooltip": "Chacinados ricos S.A., una fábrica que queda a 25 km de la casa del trabajador."
 		},
+		{
+			"id": "jefe_pepe",
+			"display_value": "Gervasio Palpin",
+			"tooltip": "Gervasio de 47 años, flamante jefe de Chacinados Ricos S.A."
+		},
+		{
+			"id": "credencial_trabajo",
+			"display_value": "Credencial de trabajo",
+			"tooltip": "Credencial para ingresar a la fabrica. Ninguna persona puede acceder a la planta sin ella."
+		},
+		{
+			"id":"golpe_colectivo",
+			"display_value":"Golpe de colectivo",
+			"tooltip": "Pepe sintió un fuerte golpe en el colectivo, a 30 minutos de haberse subido, aproximadamente 8:30hs",
+		},
 	]
 }

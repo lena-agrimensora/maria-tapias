@@ -2,20 +2,26 @@
 
 [ext_resource type="Script" uid="uid://crjryxbv4bp83" path="res://scripts/note_item.gd" id="1_okocb"]
 
-[node name="Note" type="HBoxContainer"]
+[node name="VBoxContainer" type="Button"]
 anchors_preset = -1
 anchor_right = 0.148
 anchor_bottom = 0.026
+offset_top = -2.3839989
 offset_right = 3.5039978
-offset_bottom = 6.1520004
+offset_bottom = 8.536001
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_okocb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 2
+layout_mode = 0
+offset_right = 287.0
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 2
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 4.0
+offset_right = 287.0
+offset_bottom = 27.0
 mouse_filter = 0
 text = "testestest"

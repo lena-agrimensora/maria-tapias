@@ -1,18 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://css1xn3e16274"]
+[gd_scene load_steps=7 format=3 uid="uid://css1xn3e16274"]
 
-[ext_resource type="PackedScene" uid="uid://jbnkajgfnoyu" path="res://scenes/background_mock.tscn" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://cfdbc7gtxdagf" path="res://scripts/dialogue_manager.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://chdpute8p7qf3" path="res://scenes/globo-dialogo.tscn" id="2_kpi06"]
+[ext_resource type="Texture2D" uid="uid://d1o4n6bmi5yxi" path="res://assets/trabajador.png" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ctomh4ymtd3gu" path="res://scenes/notes_sidebar.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://glhu4drbppya" path="res://scenes/evidence_item.tscn" id="4_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://dujxatbqtnkdj" path="res://assets/background/background-mock.png" id="6_o6xl0"]
 
 [node name="Main" type="Node2D"]
+
+[node name="BackgroundMock" type="Sprite2D" parent="."]
+position = Vector2(971.7777, 552.75)
+scale = Vector2(0.5020833, 0.5020833)
+texture = ExtResource("6_o6xl0")
+
+[node name="Trabajador" type="Sprite2D" parent="."]
+position = Vector2(1034, 411)
+scale = Vector2(0.99114585, 0.98888886)
+texture = ExtResource("2_tefeu")
 
 [node name="DialogueManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_tbgi4")
-
-[node name="BackgroundMock" parent="." instance=ExtResource("1_jyhfs")]
 
 [node name="GloboDialogo" parent="." instance=ExtResource("2_kpi06")]
 
@@ -20,7 +29,7 @@ script = ExtResource("1_tbgi4")
 unique_name_in_owner = true
 
 [node name="EvidenceItem" parent="." instance=ExtResource("4_jyhfs")]
-offset_left = 284.21997
-offset_top = 44.923996
-offset_right = 743.0
-offset_bottom = 178.0
+offset_left = 1279.0
+offset_top = 721.0
+offset_right = 1737.78
+offset_bottom = 854.076

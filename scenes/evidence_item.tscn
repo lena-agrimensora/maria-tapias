@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qc61hu16gbbr" path="res://assets/wsp.png" id="1_nvicl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2744i"]
-bg_color = Color(0.17442971, 0.048978, 0.12099516, 1)
+bg_color = Color(0.22031513, 0.54034936, 0.5637872, 1)
 
 [node name="EvidenceItem" type="Button"]
 anchors_preset = -1

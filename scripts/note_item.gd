@@ -1,14 +1,18 @@
-extends Control
+extends VBoxContainer
 class_name NoteItem
 
-@onready var title_label: Label = $Label
+@export var title_label: Label
 @export var tooltip_txt: String
 
 var tooltip_label: Label
 var tooltip_bg: ColorRect
 var tooltip_active: bool = false
 
+var dragging = false
+var drag_offset = Vector2()
+
 func _ready() -> void:
+	title_label = %Label
 	title_label.mouse_entered.connect(_on_button_hovered)
 	title_label.mouse_exited.connect(_on_button_exited)
 
@@ -35,7 +39,8 @@ func _make_custom_tooltip(for_text: String) -> Object:
 
 	tooltip_label.text = for_text
 	tooltip_label.modulate = Color(0, 0, 0)
-	tooltip_bg.size = tooltip_label.size + Vector2(600,30)
+	#TODO: hacer flex
+	tooltip_bg.size = tooltip_label.size + Vector2(800,30)
 	tooltip_bg.set_color(Color(1.0, 1.0, 1.0, 1.0))
 	var canvas_layer = CanvasLayer.new()
 	get_tree().root.add_child(canvas_layer)

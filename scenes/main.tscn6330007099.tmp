@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://css1xn3e16274"]
+
+[ext_resource type="Script" uid="uid://cfdbc7gtxdagf" path="res://scripts/dialogue_manager.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://chdpute8p7qf3" path="res://scenes/globo-dialogo.tscn" id="2_kpi06"]
+[ext_resource type="PackedScene" uid="uid://ctomh4ymtd3gu" path="res://scenes/notes_sidebar.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://glhu4drbppya" path="res://scenes/evidence_item.tscn" id="4_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://dujxatbqtnkdj" path="res://assets/background/background-mock.png" id="6_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://bnu83p734bba1" path="res://assets/rip.png" id="6_tefeu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="BackgroundMock" type="Sprite2D" parent="."]
+position = Vector2(971.7777, 552.75)
+scale = Vector2(0.5020833, 0.5020833)
+texture = ExtResource("6_o6xl0")
+
+[node name="DialogueManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_tbgi4")
+
+[node name="Rip" type="Sprite2D" parent="."]
+position = Vector2(1121, 415)
+scale = Vector2(0.29381806, 0.2938181)
+texture = ExtResource("6_tefeu")
+
+[node name="GloboDialogo" parent="." instance=ExtResource("2_kpi06")]
+
+[node name="NotesPanel" parent="." instance=ExtResource("3_sugp2")]
+unique_name_in_owner = true
+
+[node name="EvidenceItem" parent="." instance=ExtResource("4_jyhfs")]
+offset_left = 466.0
+offset_top = 735.0
+offset_right = 924.78
+offset_bottom = 868.076

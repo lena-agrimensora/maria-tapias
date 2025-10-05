@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxqspj1dk7q4t"]
+
+[ext_resource type="Script" uid="uid://dnx00efxq3lb0" path="res://scripts/next_phase.gd" id="1_kkga0"]
+[ext_resource type="Texture2D" uid="uid://c4tjhjhstnr2h" path="res://assets/Fase_banner.png" id="2_tlwb3"]
+[ext_resource type="FontFile" uid="uid://cyyb2qp3x4d6g" path="res://assets/fonts/Paris Forbel TTF.ttf" id="3_2l0rx"]
+
+[node name="NextButton" type="Button"]
+anchors_preset = -1
+anchor_left = 0.68700004
+anchor_top = 0.84800005
+anchor_right = 0.96700007
+anchor_bottom = 0.93700004
+offset_left = 0.95996094
+offset_top = -225.84003
+offset_right = 0.35986328
+offset_bottom = -206.96002
+script = ExtResource("1_kkga0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1381.0
+offset_bottom = 357.0
+scale = Vector2(0.38835084, 0.3199988)
+texture = ExtResource("2_tlwb3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -16.5
+offset_right = 130.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_2l0rx")
+text = "Ir a Fase de Interrogación >>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

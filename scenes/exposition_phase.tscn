@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://css1xn3e16274"]
+
+[ext_resource type="Script" uid="uid://cxkrd0y8ajxoh" path="res://scripts/game_manager.gd" id="1_nqx3n"]
+[ext_resource type="Script" uid="uid://cfdbc7gtxdagf" path="res://scripts/dialogue_manager.gd" id="2_psfj8"]
+[ext_resource type="Texture2D" uid="uid://dbyhwg5e3s4q2" path="res://assets/mock_oficina.png" id="3_551gp"]
+[ext_resource type="Texture2D" uid="uid://d1o4n6bmi5yxi" path="res://assets/trabajador.png" id="4_38sjv"]
+[ext_resource type="PackedScene" uid="uid://chdpute8p7qf3" path="res://scenes/globo-dialogo.tscn" id="5_gcwi5"]
+[ext_resource type="PackedScene" uid="uid://ctomh4ymtd3gu" path="res://scenes/notes_sidebar.tscn" id="6_bbmi8"]
+[ext_resource type="PackedScene" uid="uid://dekjs3wsbsvu0" path="res://scenes/phase_container.tscn" id="7_vl6qg"]
+[ext_resource type="Script" uid="uid://tjpk80306wsh" path="res://scripts/phase_container.gd" id="8_x1lw4"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_nqx3n")
+
+[node name="DialogueManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_psfj8")
+
+[node name="MockOficina" type="Sprite2D" parent="."]
+position = Vector2(966, 544)
+texture = ExtResource("3_551gp")
+
+[node name="Trabajador" type="Sprite2D" parent="."]
+position = Vector2(1037.0001, 679)
+scale = Vector2(0.99114585, 0.98888886)
+texture = ExtResource("4_38sjv")
+
+[node name="NPC_Dialogue_Bubble" parent="." instance=ExtResource("5_gcwi5")]
+unique_name_in_owner = true
+visible = false
+
+[node name="NotesPanel" parent="." instance=ExtResource("6_bbmi8")]
+unique_name_in_owner = true
+
+[node name="PhaseContainer" parent="." instance=ExtResource("7_vl6qg")]
+position = Vector2(5, 6)
+script = ExtResource("8_x1lw4")
+phase_name = "Fase de Exposición"
+
+[connection signal="on_container_freed" from="PhaseContainer" to="GameManager" method="_on_phase_container_on_container_freed"]

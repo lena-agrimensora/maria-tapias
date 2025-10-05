@@ -35,6 +35,7 @@ func render_dialogue(id: String, rich_text_label: RichTextLabel) -> void:
 				hint = hint_ref
 				var placeholder = "[url=" + ref + "]" + hint["display_value"] + "[/url]"
 				text = text.replace("[url=" + ref + "]" + ref + "[/url]", placeholder)
+				text = "[font_size=25]" + text + "[/font_size]"
 				rich_text_label.bbcode_text = text
 	
 func get_hints_by_dialogue_id(dialogue_id: String) -> Array:

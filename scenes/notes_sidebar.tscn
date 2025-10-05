@@ -1,16 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctomh4ymtd3gu"]
+[gd_scene load_steps=5 format=3 uid="uid://ctomh4ymtd3gu"]
 
 [ext_resource type="PackedScene" uid="uid://dagu1wdqntp3x" path="res://scenes/notes_button.tscn" id="1_icft5"]
 [ext_resource type="Script" uid="uid://dmbsj44srljtx" path="res://scripts/notes_sidebar.gd" id="1_kq1e7"]
+[ext_resource type="Texture2D" uid="uid://cpxr6ytraxn36" path="res://assets/cuaderno_notas.png" id="2_1b32c"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq1e7"]
-bg_color = Color(0.712594, 0.6129253, 0.585119, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.35303652, 0.35303655, 0.35303625, 1)
-border_blend = true
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7xbw"]
+texture = ExtResource("2_1b32c")
 
 [node name="NotesPanel" type="CanvasLayer"]
 follow_viewport_scale = 0.93
@@ -25,18 +20,19 @@ offset_left = -0.5999985
 offset_right = -359.55295
 offset_bottom = -1002.6361
 scale = Vector2(5.450465, 13.959999)
-theme_override_styles/panel = SubResource("StyleBoxFlat_kq1e7")
+theme_override_styles/panel = SubResource("StyleBoxTexture_j7xbw")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = -1
 anchor_left = 0.040000003
 anchor_top = 0.039
-anchor_right = 0.24800001
-anchor_bottom = 0.814
+anchor_right = 0.24700001
+anchor_bottom = 0.85600007
 offset_left = -0.80000305
 offset_top = -0.12000275
-offset_right = 0.8399658
-offset_bottom = 0.45599365
+offset_right = -0.24002075
+offset_bottom = -213.54047
+scale = Vector2(1, 1.3199997)
 
 [node name="Notes_Button_Control" parent="." instance=ExtResource("1_icft5")]
 offset_left = -621.68005

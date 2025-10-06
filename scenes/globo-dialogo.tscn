@@ -9,12 +9,14 @@ script = ExtResource("1_7sxj0")
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = -1
 anchor_left = 0.588
+anchor_top = 0.006
 anchor_right = 0.94900006
 anchor_bottom = 0.47100002
 offset_left = 0.040039063
-offset_top = -4.000002
+offset_top = 0.52000093
 offset_right = 2641.292
-offset_bottom = 1952.0646
+offset_bottom = 1910.2142
+grow_horizontal = 0
 scale = Vector2(0.20813516, 0.20813516)
 texture = ExtResource("2_7sxj0")
 

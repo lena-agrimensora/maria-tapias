@@ -7,4 +7,5 @@ var interrogation_scene: String = "res://scenes/interrogation_phase.tscn"
 func _on_pressed() -> void:
 	notes_panel.get_parent().remove_child(notes_panel)
 	get_tree().root.add_child(notes_panel)
+	notes_panel.visible = false
 	get_tree().change_scene_to_file(interrogation_scene)

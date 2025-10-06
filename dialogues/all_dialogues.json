@@ -4,19 +4,35 @@
 			"id": "pepe_1",
 			"character": "Pepe",
 			"display_text": "Ese día tomé el transporte a las [b][url=horario_trasporte]8 AM[/url][/b]. Estaba llegando tarde a la [b][url=lugar_trabajo]fabrica de embutidos[/url][/b].",
-			"hint_ids": ["horario_trasporte", "lugar_trabajo"]
+			"hint_ids": [
+				"horario_trasporte",
+				"lugar_trabajo"
+			]
 		},
 		{
 			"id": "pepe_2",
-			"character":"Pepe",
+			"character": "Pepe",
 			"display_text": "Mi jefe, [b][url=jefe_pepe]Gervasio Palpin[/url][/b] me había llamado la atencion un par de veces. Agarré la [b][url=credencial_trabajo]credencial[/url][/b] y me tome el 99.",
-			"hint_ids":["jefe_pepe","credencial_trabajo"]
+			"hint_ids": [
+				"jefe_pepe",
+				"credencial_trabajo"
+			]
 		},
 		{
 			"id": "pepe_3",
-			"character":"Pepe",
+			"character": "Pepe",
 			"display_text": "El viaje venia tranquilo pero a la altura de Segurola y Juan B justo sentimos[b][url=golpe_colectivo] un golpe contra el colectivo[/url][/b].",
-			"hint_ids":["golpe_colectivo"]
+			"hint_ids": [
+				"golpe_colectivo"
+			]
 		},
+		{
+			"id": "pepe_4",
+			"character": "Pepe",
+			"display_text": "Me golpee la [b][url=golpe_cabeza] CABEZA [/url][/b].",
+			"hint_ids": [
+				"golpe_cabeza"
+			]	
+		}
 	]
 }

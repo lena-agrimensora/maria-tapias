@@ -1,0 +1,14 @@
+{
+	"NPC_Answers": 
+	[
+		{
+			"Pepe": [
+				{
+					"id": "ans_pepe_1",
+					"display_text": "Estaba laburando como todo argentino de bien",
+					"evidence": "ev_pepe_1"
+				}
+			]
+		}
+	]
+}

@@ -9,18 +9,21 @@ anchors_preset = -1
 anchor_left = 0.68700004
 anchor_top = 0.84800005
 anchor_right = 0.96700007
-anchor_bottom = 0.93700004
+anchor_bottom = 0.95500004
 offset_left = 0.95996094
 offset_top = 0.15997314
 offset_right = 0.35986328
-offset_bottom = 19.039978
+offset_bottom = -0.4000244
 script = ExtResource("1_ymm3l")
 button_type = "Next"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1381.0
-offset_bottom = 357.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 0.99300003
+offset_right = 844.537
+offset_bottom = 242.805
 scale = Vector2(0.38835084, 0.3199988)
 texture = ExtResource("1_go7sm")
 

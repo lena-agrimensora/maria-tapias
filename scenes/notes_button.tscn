@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dagu1wdqntp3x"]
 
-[ext_resource type="Texture2D" uid="uid://ch83clmmp5l4i" path="res://assets/notas.png" id="1_uqcee"]
+[ext_resource type="Texture2D" uid="uid://bpxturxkqnw7h" path="res://assets/notas_button.png" id="1_uqcee"]
 
 [node name="Notes_Button_Control" type="Control"]
 layout_mode = 3
@@ -17,12 +17,12 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = -14.049001
 anchor_top = 5.3760004
-anchor_right = -11.674001
-anchor_bottom = 7.6050005
+anchor_right = -13.087001
+anchor_bottom = 6.339
 offset_left = 0.02734375
 offset_top = 0.24169922
-offset_right = -204.97266
-offset_bottom = -177.09033
-scale = Vector2(1.2287074, 1.2287074)
+offset_right = -91.708496
+offset_bottom = -100.70801
+scale = Vector2(2.5218866, 2.1923423)
 texture_normal = ExtResource("1_uqcee")
 ignore_texture_size = true

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8dniqb2ioj7g"]
+
+[ext_resource type="Texture2D" uid="uid://c4tjhjhstnr2h" path="res://assets/Fase_banner.png" id="1_rxymj"]
+[ext_resource type="FontFile" uid="uid://cyyb2qp3x4d6g" path="res://assets/fonts/Paris Forbel TTF.ttf" id="2_i05jq"]
+
+[node name="PhaseContainer" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -262.0
+offset_top = 7.0
+offset_right = 1119.0
+offset_bottom = 364.0
+grow_horizontal = 2
+scale = Vector2(0.37802124, 0.37802124)
+texture = ExtResource("1_rxymj")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.337
+anchor_top = 0.016
+anchor_right = 0.582
+anchor_bottom = 0.09900001
+offset_left = 78.96002
+offset_top = 16.72
+offset_right = 233.55994
+offset_bottom = 47.079994
+grow_horizontal = 2
+scale = Vector2(0.75205517, 0.75205517)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.80784315)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_i05jq")
+theme_override_font_sizes/font_size = 55
+text = "Caso del día: Pepe"
+horizontal_alignment = 1

@@ -37,6 +37,7 @@ func render_dialogue(id: String, rich_text_label: RichTextLabel) -> void:
 				hint = hint_ref
 				var placeholder = "[url=" + ref + "]" + hint["display_value"] + "[/url]"
 				text = text.replace("[url=" + ref + "]" + ref + "[/url]", placeholder)
+				text = text.replace("[font=res://assets/fonts/vollkorn.tres]" + text + "[/font]",text)
 				text = "[font_size=25]" + text + "[/font_size]"
 				rich_text_label.bbcode_text = text
 	

@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://dddd6l4nc1yoy"]
+
+[ext_resource type="Script" uid="uid://dxjyv5ijtaa65" path="res://scripts/evidence_item.gd" id="1_gx4qs"]
+[ext_resource type="FontFile" uid="uid://bvsy53ipblttb" path="res://assets/fonts/Vollkorn-Italic-VariableFont_wght.ttf" id="3_2o12c"]
+[ext_resource type="Texture2D" uid="uid://y8shsl4h0kot" path="res://assets/evidence_background.png" id="3_e3gbj"]
+[ext_resource type="FontFile" uid="uid://dtw4osofjq11p" path="res://assets/fonts/Vollkorn-VariableFont_wght.ttf" id="4_2o12c"]
+
+[node name="EvidenceItem" type="Button"]
+anchors_preset = -1
+anchor_left = 0.20400001
+anchor_top = 0.027
+anchor_right = 0.572
+anchor_bottom = 0.238
+offset_left = -0.6800232
+offset_top = -0.15999985
+offset_right = 10.76001
+offset_bottom = -0.2000122
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gx4qs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99700004
+anchor_bottom = 1.029
+offset_top = -1.0
+offset_right = 1407.037
+offset_bottom = 555.9669
+scale = Vector2(0.20000058, 0.20000058)
+
+[node name="EvidenceBackground" type="Sprite2D" parent="HBoxContainer"]
+position = Vector2(1785.0947, 579.19836)
+scale = Vector2(5.966316, 5.6499825)
+texture = ExtResource("3_e3gbj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Evidencia Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7080307, 0.4402033, 0.3784375, 1)
+theme_override_fonts/font = ExtResource("3_2o12c")
+theme_override_font_sizes/font_size = 150
+text = "NUEVA EVIDENCIA DESCUBIERTA!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2o12c")
+theme_override_font_sizes/font_size = 90
+text = "Conversación con Juan - Whatsapp"
+
+[node name="Description" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_2o12c")
+theme_override_font_sizes/font_size = 80
+text = "\"... cuando salgas del trabajo veni rapido para casa...\""

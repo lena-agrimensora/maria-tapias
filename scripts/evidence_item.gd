@@ -1,19 +1,19 @@
 extends Button
 class_name EvidenceItem
 
-@onready var evidence_icon: TextureRect = $HBoxContainer/TextureRect
+#@onready var evidence_icon: TextureRect = $HBoxContainer/TextureRect
 @onready var title_label: Label = $HBoxContainer/VBoxContainer/Title
 @onready var desc_label: Label = $HBoxContainer/VBoxContainer/Description
-@onready var notes_panel = %NotesPanel
+var notes_panel
 
 func _ready() -> void:
 	pressed.connect(_on_evidence_button_pressed)
 	self.mouse_entered.connect(_on_button_hovered)
 	self.mouse_exited.connect(_on_button_exited)
+	notes_panel = get_node("/root/NotesPanel")
 	pass
 	
-func setup(icon_tex: Texture2D, title: String, description: String):
-	evidence_icon.texture = icon_tex
+func setup(title: String, description: String):
 	title_label.text = title
 	desc_label.text = description
 	pass

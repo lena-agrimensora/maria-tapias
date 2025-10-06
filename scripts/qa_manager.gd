@@ -13,8 +13,6 @@ var evidences: Array = []
 
 var question_box_instance
 
-
-
 func _ready() -> void:
 	await get_tree().create_timer(2.0).timeout
 	question_box_instance = question_box.instantiate()

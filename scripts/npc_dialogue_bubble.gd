@@ -3,15 +3,16 @@ class_name NPC_Dialogue_Bubble
 
 @export var dialogue : Dialogue
 @export var character_name: String
-var character_dialogues: Array = []
+
 var current_dialogue_id: String = ""
 var current_dialogue_index: int = 0
 
+var character_dialogues: Array = []
 var hint_references : Array = []
 
 
-@onready var notes_sidebar = %NotesPanel
-@onready var dialogue_manager : DialogueManager = %DialogueManager
+@onready var notes_sidebar = $"/root/Main/NotesPanel"
+@onready var dialogue_manager : DialogueManager = $"/root/Main/DialogueManager"
 @onready var rich_text_label: RichTextLabel = $MarginContainer/RichTextLabel
 
 var next_button       : Button
@@ -48,12 +49,12 @@ func _on_meta_clicked(meta: String) -> void:
 	await get_tree().create_timer(0.3).timeout
 
 #TODO: una sola funcion para ambos botones
-func _on_previous_button_pressed() -> void:
-	current_dialogue_index = current_dialogue_index-1
-	current_dialogue_id = character_dialogues[current_dialogue_index].id
-	dialogue_manager.render_dialogue(current_dialogue_id,rich_text_label)
-	hint_references = dialogue_manager.get_hints_by_dialogue_id(current_dialogue_id)	
-	pass
+#func _on_previous_button_pressed() -> void:
+	#current_dialogue_index = current_dialogue_index-1
+	#current_dialogue_id = character_dialogues[current_dialogue_index].id
+	#dialogue_manager.render_dialogue(current_dialogue_id,rich_text_label)
+	#hint_references = dialogue_manager.get_hints_by_dialogue_id(current_dialogue_id)	
+	#pass
 
 func _on_button_pressed(type: String) -> void:
 	print(type)

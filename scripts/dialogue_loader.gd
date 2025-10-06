@@ -18,6 +18,7 @@ func _ready() -> void:
 	load_hints()
 	load_evidences()
 	load_player_questions()
+	load_npc_answers()
 	
 
 func load_dialogues():
@@ -84,7 +85,7 @@ func load_player_questions():
 		var data = json.parse(json_data)
 		if data == OK:
 			#TODO: no solo pushear las hints, crear un Dialogue con cada uno y LUEGO pushear
-			all_evidences = json.get_data()["player_questions"]
+			all_player_questions = json.get_data()["player_questions"]
 			print("-----Listo. Preguntas jugador: ", all_player_questions)
 			pass
 		else:
@@ -102,8 +103,7 @@ func load_npc_answers():
 		var json = JSON.new()
 		var data = json.parse(json_data)
 		if data == OK:
-			#TODO: no solo pushear las hints, crear un Dialogue con cada uno y LUEGO pushear
-			all_evidences = json.get_data()["NPC_Answers"]
+			all_npc_answers = json.get_data()["NPC_Answers"]
 			print("-----Listo. Respuestas NPCs: ", all_npc_answers)
 			pass
 		else:

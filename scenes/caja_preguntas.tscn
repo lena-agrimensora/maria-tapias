@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhi3x5isq68nh"]
+
+[ext_resource type="Texture2D" uid="uid://bshy30qjng8uk" path="res://assets/caja_preguntas.png" id="1_xkx0n"]
+[ext_resource type="Script" uid="uid://ck38lortm47n6" path="res://scenes/question_button.gd" id="2_liubj"]
+
+[node name="CajaPreguntas" type="TextureRect"]
+anchors_preset = -1
+anchor_left = 0.254
+anchor_top = 0.734
+anchor_right = 0.83100003
+anchor_bottom = 0.99600005
+offset_left = 0.3199768
+offset_top = 0.27996826
+offset_right = 70.47998
+offset_bottom = 170.31995
+scale = Vector2(0.9401909, 0.6243799)
+texture = ExtResource("1_xkx0n")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.14500001
+anchor_right = 0.75900006
+anchor_bottom = 0.31100002
+offset_left = 0.121032715
+offset_top = -0.019859314
+offset_right = 0.39715576
+offset_bottom = 0.056793213
+script = ExtResource("2_liubj")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.14500001
+anchor_right = 0.75900006
+anchor_bottom = 0.31100002
+offset_left = 0.121032715
+offset_top = 118.497734
+offset_right = 0.39715576
+offset_bottom = 118.57439
+script = ExtResource("2_liubj")
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.14500001
+anchor_right = 0.75900006
+anchor_bottom = 0.31100002
+offset_left = 0.121032715
+offset_top = 241.8201
+offset_right = 0.39715576
+offset_bottom = 241.89674
+script = ExtResource("2_liubj")
+
+[connection signal="pressed" from="Button" to="Button3" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button" method="_on_pressed"]

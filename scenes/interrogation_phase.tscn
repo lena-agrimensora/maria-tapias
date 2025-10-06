@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bm5d8yf34b61k"]
 
 [ext_resource type="Script" uid="uid://cxkrd0y8ajxoh" path="res://scripts/game_manager.gd" id="1_o8ctr"]
-[ext_resource type="Script" uid="uid://bhfnsmhlq4iik" path="res://scenes/qa_manager.gd" id="2_2ilrk"]
+[ext_resource type="Script" uid="uid://bhfnsmhlq4iik" path="res://scripts/qa_manager.gd" id="2_2ilrk"]
 [ext_resource type="Texture2D" uid="uid://dbyhwg5e3s4q2" path="res://assets/mock_oficina.png" id="3_5xsd8"]
 [ext_resource type="Texture2D" uid="uid://d1o4n6bmi5yxi" path="res://assets/trabajador.png" id="4_ksv34"]
 [ext_resource type="PackedScene" uid="uid://dekjs3wsbsvu0" path="res://scenes/phase_container.tscn" id="7_hdqay"]

@@ -3,10 +3,12 @@ class_name DialogueManager
 
 var dialogues: Array = []
 var hint_references: Array = []
+var npc_answers: Array = []
 
 func _ready() -> void:
 	dialogues = Dialogue_Loader.all_dialogues
 	hint_references = Dialogue_Loader.all_hints
+	npc_answers = Dialogue_Loader.all_npc_answers
 	print("Tengo todos los dialogos desde el Manager: ", dialogues)
 	pass
 

@@ -5,7 +5,20 @@
 			"Pepe": [
 				{
 					"id": "ans_pepe_1",
-					"display_text": "Estaba laburando como todo argentino de bien",
+					"question_id": "q_pepe_1",
+					"display_text": "Estaba laburando como corresponde",
+					"evidence": "ev_pepe_1"
+				},
+				{
+					"id": "ans_pepe_2",
+					"question_id": "q_pepe_2",
+					"display_text": "Bien, relativamente tranquilas. La mitad de la planta estaba en el comedor festejando el cumpleaños de Pablito el chico nuevo.",
+					"evidence": "ev_pepe_1"
+				},
+				{
+					"id": "ans_pepe_3",
+					"question_id": "q_pepe_3",
+					"display_text": "Si, ni bien llegue cruzamos miradas en la cocina. Vio que tenia la cabeza lastimada y se dio vuelta enseguida",
 					"evidence": "ev_pepe_1"
 				}
 			]

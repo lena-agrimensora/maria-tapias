@@ -30,7 +30,7 @@ func _on_evidence_button_pressed() -> void:
 	_on_button_exited()
 	queue_free()
 	pass
-	
+
 func _on_button_hovered():
 	self.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	pass

@@ -19,7 +19,6 @@ func _ready() -> void:
 	load_evidences()
 	load_player_questions()
 	load_npc_answers()
-	
 
 func load_dialogues():
 	var file = FileAccess.open(dialogues_file_path, FileAccess.READ)

@@ -5,6 +5,18 @@
 			"character": "Pepe",
 			"display_text": "Donde estabas a las 9 am?",
 			"answer_id": "ans_pepe_1"
+		},
+		{
+			"id": "q_pepe_2",
+			"character": "Pepe",
+			"display_text": "¿Como estaban las cosas en la fabrica ese dia?",
+			"answer_id": "ans_pepe_2"
+		},
+		{
+			"id": "q_pepe_3",
+			"character": "Pepe",
+			"display_text": "¿Tu jefe te vió llegar?",
+			"answer_id": "ans_pepe_3"
 		}
 	]
 }

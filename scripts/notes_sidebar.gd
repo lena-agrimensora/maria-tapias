@@ -25,7 +25,7 @@ func _on_button_hovered():
 
 func _on_button_exited() -> void:
 	notes_button.mouse_default_cursor_shape = Control.CURSOR_ARROW
-	
+
 func add_note(ref: Dictionary) -> void:
 	
 	for child in notes_list.get_children():
@@ -46,4 +46,3 @@ func add_note(ref: Dictionary) -> void:
 	notes_button.modulate = Color(0.388, 0.523, 0.857, 1.0)
 	await get_tree().create_timer(0.3).timeout
 	notes_button.modulate = Color(1.0, 1.0, 1.0, 1.0)
-	

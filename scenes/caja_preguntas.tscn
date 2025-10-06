@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhi3x5isq68nh"]
 
 [ext_resource type="Texture2D" uid="uid://bshy30qjng8uk" path="res://assets/caja_preguntas.png" id="1_xkx0n"]
-[ext_resource type="Script" uid="uid://ck38lortm47n6" path="res://scenes/question_button.gd" id="2_liubj"]
+[ext_resource type="Script" uid="uid://ck38lortm47n6" path="res://scripts/question_button.gd" id="2_liubj"]
 
 [node name="CajaPreguntas" type="TextureRect"]
 anchors_preset = -1
@@ -27,6 +27,7 @@ offset_left = 0.121032715
 offset_top = -0.019859314
 offset_right = 0.39715576
 offset_bottom = 0.056793213
+text = "TEST"
 script = ExtResource("2_liubj")
 
 [node name="Button2" type="Button" parent="."]
@@ -55,6 +56,6 @@ offset_right = 0.39715576
 offset_bottom = 241.89674
 script = ExtResource("2_liubj")
 
-[connection signal="pressed" from="Button" to="Button3" method="_on_pressed"]
-[connection signal="pressed" from="Button2" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Button3" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

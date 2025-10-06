@@ -30,7 +30,6 @@ func _ready():
 	current_dialogue_id = character_dialogues[current_dialogue_index].id
 	dialogue_manager.render_dialogue(current_dialogue_id,rich_text_label)
 	hint_references = dialogue_manager.get_hints_by_dialogue_id(current_dialogue_id)
-	
 
 func _on_meta_clicked(meta: String) -> void:
 	var ref = null
@@ -47,14 +46,6 @@ func _on_meta_clicked(meta: String) -> void:
 	
 	notes_sidebar.add_note(ref)
 	await get_tree().create_timer(0.3).timeout
-
-#TODO: una sola funcion para ambos botones
-#func _on_previous_button_pressed() -> void:
-	#current_dialogue_index = current_dialogue_index-1
-	#current_dialogue_id = character_dialogues[current_dialogue_index].id
-	#dialogue_manager.render_dialogue(current_dialogue_id,rich_text_label)
-	#hint_references = dialogue_manager.get_hints_by_dialogue_id(current_dialogue_id)	
-	#pass
 
 func _on_button_pressed(type: String) -> void:
 	print(type)
@@ -73,7 +64,6 @@ func _on_button_pressed(type: String) -> void:
 	hint_references = dialogue_manager.get_hints_by_dialogue_id(current_dialogue_id)	
 	update_button_states()
 	pass
-
 
 func update_button_states() -> void:
 	next_button = get_node("/root/Main/GameManager/NextButton")

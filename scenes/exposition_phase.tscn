@@ -20,6 +20,7 @@ script = ExtResource("2_psfj8")
 
 [node name="MockOficina" type="Sprite2D" parent="."]
 position = Vector2(966, 544)
+scale = Vector2(1.0169265, 1.0169265)
 texture = ExtResource("3_551gp")
 
 [node name="Trabajador" type="Sprite2D" parent="."]

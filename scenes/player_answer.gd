@@ -6,11 +6,10 @@ class_name PlayerAnswer
 @onready var right_hints
 @onready var wrong_hints
 @onready var hints_ref
+@onready var q_ref
+
+signal on_answer_emit
 
 func _on_pressed() -> void:
-	print("Id: ", id)
-	print("Is correct: ", is_correct)
-	print("Right Hints: ", right_hints)
-	print("Wrong Hints: ", wrong_hints)
-	print("all hints: ", hints_ref)
+	on_answer_emit.emit([id, q_ref, is_correct, right_hints, wrong_hints, hints_ref])
 	pass

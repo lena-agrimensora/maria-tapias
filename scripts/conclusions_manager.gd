@@ -3,7 +3,7 @@ class_name ConclusionsManager
 
 @export var character_name: String
 var npc_questions: Array = []
-var conclusions: Array = []
+var conclusions  : Array = []
 var initial_index: int = 0
 var current_question
 
@@ -25,7 +25,7 @@ func get_npc_question() -> void:
 	rich_text_label.bbcode_text = current_question.text_desc
 	add_child(ans_bubble_instance)
 	render_player_options(current_question.id)
-	
+
 func render_player_options(question_id: String) -> void:
 	var i = 0
 	for conc in conclusions:
@@ -38,6 +38,13 @@ func render_player_options(question_id: String) -> void:
 			button.right_hints = conc.right_hints if conc.right_hints != null else ""
 			button.wrong_hints = conc.wrong_hints if conc.wrong_hints != null else ""
 			button.hints_ref = conc.hints if conc.hints != null else []
+			button.q_ref = conc.q_ref
 			button.visible = true
+			button.connect("on_answer_emit", Callable(self, "handle_player_response"))
 			i+=1
+	pass
+
+func handle_player_response(args: Array) -> void:
+	print("recibi increibles args: ", args)
+	print("Y tenia la sig pregunta: ", current_question)
 	pass

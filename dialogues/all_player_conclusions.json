@@ -4,7 +4,7 @@
 			"id": "answ_pepe_1",
 			"q_ref": "npc_q_pepe_1",
 			"display_text":"Si, estás cubierto",
-			"is_correct":"true", //pepe
+			"is_correct":"true",
 			"right_hints": "Si, el siniestro se dio en el colectivo, 30 minutos antes de ingresar a la fabrica.",
 			"wrong_hints":"Si, estas cubierto....no se bien por qué",
 			"hints":["golpe_cabeza","golpe_colectivo"],

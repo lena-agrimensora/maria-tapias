@@ -60,7 +60,7 @@ func handle_question_invoked(question_id: String) -> void:
 	if clicked_buttons.size() == questions.size():
 		next_button.next_scene = next_scene
 		next_button.label_text = "Ir a fase de Conclusión"
-		next_button.visible = true		
+		next_button.visible = true
 		print("mostrar sig fase")
 		pass
 	

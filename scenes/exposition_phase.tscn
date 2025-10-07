@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://css1xn3e16274"]
+[gd_scene load_steps=9 format=3 uid="uid://css1xn3e16274"]
 
 [ext_resource type="Script" uid="uid://cxkrd0y8ajxoh" path="res://scripts/game_manager.gd" id="1_nqx3n"]
 [ext_resource type="Script" uid="uid://cfdbc7gtxdagf" path="res://scripts/dialogue_manager.gd" id="2_psfj8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d1o4n6bmi5yxi" path="res://assets/trabajador.png" id="4_38sjv"]
 [ext_resource type="PackedScene" uid="uid://ctomh4ymtd3gu" path="res://scenes/notes_sidebar.tscn" id="6_bbmi8"]
 [ext_resource type="PackedScene" uid="uid://dekjs3wsbsvu0" path="res://scenes/phase_container.tscn" id="7_vl6qg"]
+[ext_resource type="PackedScene" uid="uid://cxqspj1dk7q4t" path="res://scenes/next_phase.tscn" id="8_nqx3n"]
 [ext_resource type="Script" uid="uid://tjpk80306wsh" path="res://scripts/phase_container.gd" id="8_x1lw4"]
 
 [node name="Main" type="Node2D"]
@@ -35,5 +36,12 @@ unique_name_in_owner = true
 position = Vector2(5, 6)
 script = ExtResource("8_x1lw4")
 phase_name = "Fase de Exposición"
+
+[node name="NextButton" parent="." instance=ExtResource("8_nqx3n")]
+visible = false
+offset_left = 1321.0
+offset_top = 756.0
+offset_right = 1859.04
+offset_bottom = 869.84
 
 [connection signal="on_container_freed" from="PhaseContainer" to="GameManager" method="_on_phase_container_on_container_freed"]

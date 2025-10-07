@@ -14,10 +14,9 @@ var hint_references : Array = []
 @onready var notes_sidebar = $"/root/Main/NotesPanel"
 @onready var dialogue_manager : DialogueManager = $"/root/Main/DialogueManager"
 @onready var rich_text_label: RichTextLabel = $MarginContainer/RichTextLabel
-
+@onready var next_phase_button = $"/root/Main/NextButton"
 var next_button       : Button
 var prev_button       : Button
-var next_phase_button : PackedScene = preload("res://scenes/next_phase.tscn")
 
 func _ready():
 	character_name = "Pepe"
@@ -53,10 +52,10 @@ func _on_button_pressed(type: String) -> void:
 		#TODO: Validar fuera de rango :3
 		current_dialogue_index = current_dialogue_index+1
 		if(current_dialogue_index == character_dialogues.size()-1):
-			var next_phase_instance = next_phase_button.instantiate()
-			self.add_child(next_phase_instance)
+			next_phase_button.next_scene = "res://scenes/interrogation_phase.tscn"
+			next_phase_button.visible = true
+			
 	elif type == "Previous":
-		#TODO: Validar fuera de rango tambien
 		current_dialogue_index = current_dialogue_index-1
 		
 	current_dialogue_id = character_dialogues[current_dialogue_index].id

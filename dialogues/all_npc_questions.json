@@ -1,0 +1,19 @@
+{
+	"npc_questions": 
+		{
+		"Pepe": [
+				{
+					"id": "npc_q_pepe_1",
+					"text_desc": "¿Me cubre el seguro los gastos medicos?",
+					"answer": "true",
+					"hint":"golpe_cabeza"
+					},
+					{
+					"id": "npc_q_pepe_2",
+					"text_desc": "¿igualmente deberia ir a trabajar mañana?",
+					"answer": "false",
+					"hint":"golpe_cabeza"
+					}
+		]
+	}
+}

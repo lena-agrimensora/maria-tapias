@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtity0q7ukhni"]
+
+[ext_resource type="Script" uid="uid://boptomurbsmp0" path="res://scenes/player_answer.gd" id="1_dxeid"]
+[ext_resource type="Texture2D" uid="uid://dbb4ow8pht80i" path="res://assets/player_answ_texture.png" id="1_wjr64"]
+[ext_resource type="FontFile" uid="uid://bvsy53ipblttb" path="res://assets/fonts/Vollkorn-Italic-VariableFont_wght.ttf" id="2_2w2b3"]
+
+[node name="PlayerAnswer" type="Button"]
+anchors_preset = -1
+anchor_left = 0.091000006
+anchor_top = 0.80100006
+anchor_right = 0.354
+anchor_bottom = 0.919
+offset_left = -0.7200165
+offset_top = -0.080078125
+offset_right = 0.32000732
+offset_bottom = 0.47998047
+script = ExtResource("1_dxeid")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 453.0
+offset_bottom = 86.0
+texture = ExtResource("1_wjr64")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0020001
+anchor_bottom = 0.99200004
+offset_left = 17.0
+offset_top = 7.0
+offset_right = -17.012054
+offset_bottom = -8.976006
+theme_override_fonts/font = ExtResource("2_2w2b3")
+theme_override_font_sizes/font_size = 45
+text = "test"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

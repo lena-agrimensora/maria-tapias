@@ -1,0 +1,22 @@
+{
+	"player_conclusions": [
+		{
+			"id": "answ_pepe_1",
+			"q_ref": "npc_q_pepe_1",
+			"display_text":"Si, estás cubierto",
+			"is_correct":"true", //pepe
+			"right_hints": "Si, el siniestro se dio en el colectivo, 30 minutos antes de ingresar a la fabrica.",
+			"wrong_hints":"Si, estas cubierto....no se bien por qué",
+			"hints":["golpe_cabeza","golpe_colectivo"],
+		},
+		{
+			"id": "answ_pepe_2",
+			"q_ref": "npc_q_pepe_1",
+			"display_text":"Lamentablemente,no.",
+			"is_correct":"false",
+			"right_hints": "",
+			"wrong_hints":"No, no te cubre el seguro. No se bien por qué, no recuerdo todas las leyes",
+			"hints":[],
+		},
+	]
+}

@@ -6,12 +6,17 @@ var all_hints: Array = []
 var all_evidences: Array = []
 var all_player_questions: Array = []
 var all_npc_answers: Array
+var all_npc_questions: Dictionary
+var all_player_conclusions: Array = []
 
 @export var dialogues_file_path : String = "res://dialogues/all_dialogues.json"
 @export var hints_file_path: String = "res://dialogues/all_hints.json"
 @export var evidences_file_path: String = "res://dialogues/all_evidences.json"
 @export var player_questions_file_path: String = "res://dialogues/all_player_questions.json"
 @export var npc_answers_file_path: String = "res://dialogues/all_npc_answers.json"
+@export var npc_questions_file_path: String = "res://dialogues/all_npc_questions.json"
+@export var player_conclusions_file_path: String = "res://dialogues/all_player_conclusions.json"
+
 
 func _ready() -> void:
 	load_dialogues()
@@ -19,6 +24,8 @@ func _ready() -> void:
 	load_evidences()
 	load_player_questions()
 	load_npc_answers()
+	load_npc_questions()
+	load_player_conclusions()
 
 func load_dialogues():
 	var file = FileAccess.open(dialogues_file_path, FileAccess.READ)
@@ -110,5 +117,41 @@ func load_npc_answers():
 			pass
 	else:
 		print("Error al abrir el archivo de pistas")
+		pass
+	pass
+
+func load_npc_questions():
+	var file = FileAccess.open(npc_questions_file_path, FileAccess.READ)
+	if file:
+		var json_data = file.get_as_text()
+		var json = JSON.new()
+		var data = json.parse(json_data)
+		if data == OK:
+			all_npc_questions = json.get_data()["npc_questions"]
+			print("-----Listo. Preguntas NPCs: ", all_npc_questions)
+			pass
+		else:
+			print("MMM:", json.get_error_message())
+			pass
+	else:
+		print("Error al abrir el archivo de preguntas NPC")
+		pass
+	pass
+
+func load_player_conclusions():
+	var file = FileAccess.open(player_conclusions_file_path, FileAccess.READ)
+	if file:
+		var json_data = file.get_as_text()
+		var json = JSON.new()
+		var data = json.parse(json_data)
+		if data == OK:
+			all_player_conclusions = json.get_data()["player_conclusions"]
+			print("-----Listo. conclusiones jugador: ", all_player_conclusions)
+			pass
+		else:
+			print("MMM:", json.get_error_message())
+			pass
+	else:
+		print("Error al abrir el archivo de conclusiones del jugador.")
 		pass
 	pass

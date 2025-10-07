@@ -11,7 +11,10 @@ var evidences: Array = []
 @onready var question_box = preload("res://scenes/caja_preguntas.tscn")
 @onready var npc_answer_bubble = preload("res://scenes/npc_answer.tscn")
 
+var next_scene = "res://scenes/conclusion_phase.tscn"
 var question_box_instance
+var clicked_buttons: Array = []
+@onready var next_button = $"../NextButton"
 
 func _ready() -> void:
 	await get_tree().create_timer(2.0).timeout
@@ -51,3 +54,13 @@ func handle_question_invoked(question_id: String) -> void:
 	var ans_bubble_instance = npc_answer_bubble.instantiate()
 	add_child(ans_bubble_instance)
 	ans_bubble_instance.render_npc_answer(question_id, character_name)
+	if not clicked_buttons.has(question_id):
+		clicked_buttons.append(question_id)
+	
+	if clicked_buttons.size() == questions.size():
+		next_button.next_scene = next_scene
+		next_button.label_text = "Ir a fase de Conclusión"
+		next_button.visible = true		
+		print("mostrar sig fase")
+		pass
+	

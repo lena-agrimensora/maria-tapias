@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqx4dbfq2updl"]
+
+[ext_resource type="Script" uid="uid://cxkrd0y8ajxoh" path="res://scripts/game_manager.gd" id="1_lrjal"]
+[ext_resource type="Script" uid="uid://bfwpsq24v66nc" path="res://scripts/conclusions_manager.gd" id="2_m1lsq"]
+[ext_resource type="Texture2D" uid="uid://dbyhwg5e3s4q2" path="res://assets/mock_oficina.png" id="3_3ahax"]
+[ext_resource type="Texture2D" uid="uid://d1o4n6bmi5yxi" path="res://assets/trabajador.png" id="4_iihoo"]
+[ext_resource type="PackedScene" uid="uid://dekjs3wsbsvu0" path="res://scenes/phase_container.tscn" id="6_yrs84"]
+[ext_resource type="Script" uid="uid://tjpk80306wsh" path="res://scripts/phase_container.gd" id="7_hy6t4"]
+[ext_resource type="PackedScene" uid="uid://dtity0q7ukhni" path="res://scenes/player_answer.tscn" id="7_m22fq"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_lrjal")
+phase_name = "Conclusion"
+
+[node name="ConclusionsManager" type="Node" parent="." node_paths=PackedStringArray("player_buttons")]
+script = ExtResource("2_m1lsq")
+character_name = "Pepe"
+player_buttons = [NodePath("../PlayerAnswer"), NodePath("../PlayerAnswer2")]
+
+[node name="MockOficina" type="Sprite2D" parent="."]
+position = Vector2(966, 544)
+scale = Vector2(1.0169265, 1.0169265)
+texture = ExtResource("3_3ahax")
+
+[node name="Trabajador" type="Sprite2D" parent="."]
+position = Vector2(1037.0001, 679)
+scale = Vector2(0.99114585, 0.98888886)
+texture = ExtResource("4_iihoo")
+
+[node name="PhaseContainer" parent="." instance=ExtResource("6_yrs84")]
+position = Vector2(5, 6)
+script = ExtResource("7_hy6t4")
+phase_name = "Fase de Conclusion"
+
+[node name="PlayerAnswer" parent="." instance=ExtResource("7_m22fq")]
+visible = false
+offset_left = 697.0
+offset_top = 750.0
+offset_right = 705.0
+offset_bottom = 758.0
+
+[node name="PlayerAnswer2" parent="." instance=ExtResource("7_m22fq")]
+visible = false
+offset_left = 697.0
+offset_top = 904.0
+offset_right = 705.0
+offset_bottom = 912.0
+
+[connection signal="on_container_freed" from="PhaseContainer" to="GameManager" method="_on_phase_container_on_container_freed"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dtity0q7ukhni"]
 
-[ext_resource type="Script" uid="uid://boptomurbsmp0" path="res://scenes/player_answer.gd" id="1_dxeid"]
+[ext_resource type="Script" uid="uid://boptomurbsmp0" path="res://scripts/player_answer.gd" id="1_dxeid"]
 [ext_resource type="Texture2D" uid="uid://dbb4ow8pht80i" path="res://assets/player_answ_texture.png" id="1_wjr64"]
 [ext_resource type="FontFile" uid="uid://bvsy53ipblttb" path="res://assets/fonts/Vollkorn-Italic-VariableFont_wght.ttf" id="2_2w2b3"]
 

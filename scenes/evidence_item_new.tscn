@@ -22,29 +22,35 @@ script = ExtResource("1_gx4qs")
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.99700004
-anchor_bottom = 1.029
+anchor_right = 0.83400005
+anchor_bottom = 0.69000006
 offset_top = -1.0
-offset_right = 1407.037
-offset_bottom = 555.9669
+offset_right = 2396.1792
+offset_bottom = 633.2047
 scale = Vector2(0.20000058, 0.20000058)
 
 [node name="EvidenceBackground" type="Sprite2D" parent="HBoxContainer"]
 position = Vector2(1785.0947, 579.19836)
-scale = Vector2(5.966316, 5.6499825)
+scale = Vector2(6.16634, 6.249984)
 texture = ExtResource("3_e3gbj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
 
-[node name="Evidencia Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Evidencia Label2" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.7080307, 0.4402033, 0.3784375, 1)
-theme_override_fonts/font = ExtResource("3_2o12c")
-theme_override_font_sizes/font_size = 150
-text = "NUEVA EVIDENCIA DESCUBIERTA!"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/default_color = Color(1.3947834, 0.6220678, 0.39008117, 1)
+theme_override_fonts/normal_font = ExtResource("3_2o12c")
+theme_override_fonts/bold_font = ExtResource("3_2o12c")
+theme_override_font_sizes/normal_font_size = 150
+theme_override_font_sizes/bold_font_size = 150
+theme_override_font_sizes/bold_italics_font_size = 150
+theme_override_font_sizes/italics_font_size = 150
+theme_override_font_sizes/mono_font_size = 150
+bbcode_enabled = true
+text = "[wave amp=80.0 freq=7.0 connected=1][b]NUEVA EVIDENCIA DESCUBIERTA![/b][/wave]"
+fit_content = true
+vertical_alignment = 3
 
 [node name="Title" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2

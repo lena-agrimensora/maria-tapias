@@ -1,13 +1,16 @@
-extends Node
 class_name ConclusionsManager
+extends Node
 
 @export var character_name: String
 var npc_questions: Array = []
 var conclusions  : Array = []
-var initial_index: int = 0
-var current_question
+var initial_index: int   = 0
 
-@onready var npc_answer_bubble = preload("res://scenes/npc_answer.tscn")
+var current_question
+var current_answer_text
+
+@onready var evidence_picker_panel: PackedScene = preload("res://scenes/evidence_picker.tscn")
+@onready var npc_answer_bubble    : PackedScene = preload("res://scenes/npc_answer.tscn")
 
 @export var player_buttons : Array[Button]
 
@@ -33,6 +36,7 @@ func render_player_options(question_id: String) -> void:
 			var button = player_buttons[i]
 			var label: Label = button.get_node("Label")
 			label.text = conc.display_text
+			current_answer_text = conc.display_text
 			button.id = conc.id
 			button.is_correct = conc.is_correct
 			button.right_hints = conc.right_hints if conc.right_hints != null else ""
@@ -47,4 +51,22 @@ func render_player_options(question_id: String) -> void:
 func handle_player_response(args: Array) -> void:
 	print("recibi increibles args: ", args)
 	print("Y tenia la sig pregunta: ", current_question)
+	#TODO: convertir en Dict?
+	if args[1] == current_question.id and args[2] == "true":
+		instantiate_evaluator_panel(current_question.text_desc, current_answer_text)
+	elif args[1] == current_question.id and args[2] == "false":
+		print("NOOO re mal la respuesta")
+	pass
+
+func instantiate_evaluator_panel(q_text: String, a_text: String) -> void:
+	#TODO: obviamente hacer dinamico y en otra funcion
+	var npc_bubble   = get_node("/root/Main/ConclusionsManager/CanvasLayer")
+	var player_answ  = get_node("/root/Main/PlayerAnswer")
+	var player_answ2 = get_node("/root/Main/PlayerAnswer2")
+	npc_bubble.hide()
+	player_answ.hide()
+	player_answ2.hide()
+	var ev_picker_instance = evidence_picker_panel.instantiate()
+	get_tree().root.add_child(ev_picker_instance)
+	ev_picker_instance.setup(q_text, a_text)
 	pass

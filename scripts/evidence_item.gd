@@ -1,10 +1,11 @@
-extends Button
 class_name EvidenceItem
+extends Button
 
-#@onready var evidence_icon: TextureRect = $HBoxContainer/TextureRect
+
 @onready var title_label: Label = $HBoxContainer/VBoxContainer/Title
-@onready var desc_label: Label = $HBoxContainer/VBoxContainer/Description
+@onready var desc_label : Label = $HBoxContainer/VBoxContainer/Description
 var notes_panel
+signal evidence_consumed (id: String)
 
 func _ready() -> void:
 	pressed.connect(_on_evidence_button_pressed)
@@ -28,6 +29,7 @@ func _on_evidence_button_pressed() -> void:
 		}
 		notes_panel.add_note(ref)
 	_on_button_exited()
+	evidence_consumed.emit("title_label.texttest")
 	queue_free()
 	pass
 

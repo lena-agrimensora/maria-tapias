@@ -30,16 +30,14 @@ func add_note(ref: Dictionary) -> void:
 	
 	for child in notes_list.get_children():
 		if child.name == ref.id:
-			return	
+			return
 	
 	var note_instance = NoteItemRef.instantiate()
 	note_instance.name = ref.id
-
-	var label = note_instance.get_child(1)
-		
-	label.text = ref.display_value	
-	
 	notes_list.add_child(note_instance)
+	
+	note_instance.text = ref.display_value
+	note_instance.display_text = ref.display_value
 	note_instance.visible = notes_list.visible
 	
 	note_instance.tooltip_txt = ref.tooltip

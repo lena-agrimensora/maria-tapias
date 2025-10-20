@@ -36,7 +36,7 @@ func render_player_options(question_id: String) -> void:
 			var button = player_buttons[i]
 			var label: Label = button.get_node("Label")
 			label.text = conc.display_text
-			current_answer_text = conc.display_text
+			button.display_value = conc.display_text
 			button.id = conc.id
 			button.is_correct = conc.is_correct
 			button.right_hints = conc.right_hints if conc.right_hints != null else ""
@@ -51,10 +51,12 @@ func render_player_options(question_id: String) -> void:
 func handle_player_response(args: Array) -> void:
 	print("recibi increibles args: ", args)
 	print("Y tenia la sig pregunta: ", current_question)
+	var display_answer = args[3]
 	#TODO: convertir en Dict?
 	if args[1] == current_question.id and args[2] == "true":
-		instantiate_evaluator_panel(current_question.text_desc, current_answer_text)
+		instantiate_evaluator_panel(current_question.text_desc, display_answer)
 	elif args[1] == current_question.id and args[2] == "false":
+		instantiate_evaluator_panel(current_question.text_desc, display_answer)
 		print("NOOO re mal la respuesta")
 	pass
 

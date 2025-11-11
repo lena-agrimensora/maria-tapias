@@ -12,6 +12,8 @@ var tooltip_canvas_layer: CanvasLayer
 var dragging = false
 var drag_offset = Vector2()
 
+signal note_item_pressed(note_id)
+
 func _ready() -> void:
 	self.mouse_entered.connect(_on_button_hovered)
 	self.mouse_exited.connect(_on_button_exited)
@@ -62,4 +64,19 @@ func _hide_tooltip() -> void:
 	tooltip_bg.visible = false
 
 func _on_pressed() -> void:
-	print("test: ", display_text)
+	var evidence_picker = get_node("/root/EvidencePicker")
+	if evidence_picker:
+		print("Increíble, puedo pingear ", evidence_picker)
+		print("test: ", display_text)
+		
+		var labels = evidence_picker.get_node("CanvasLayer/TextureRect").get_children()
+		
+		for label in labels:
+			print(label.name)
+			if label.name.begins_with("Evidence") and label.text == "(Elegir evidencia del Cuaderno de Notas)" and label.visible:
+				evidence_picker.instantiate_evidence(label.name, display_text)
+				note_item_pressed.emit(display_text)
+				if(evidence_picker.confirm_button.visible == false):
+					evidence_picker.confirm_button.visible = true
+					evidence_picker.confirm_button.disabled = false
+				break

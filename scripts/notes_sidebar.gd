@@ -44,3 +44,19 @@ func add_note(ref: Dictionary) -> void:
 	notes_button.modulate = Color(0.388, 0.523, 0.857, 1.0)
 	await get_tree().create_timer(0.3).timeout
 	notes_button.modulate = Color(1.0, 1.0, 1.0, 1.0)
+
+	note_instance.connect("note_item_pressed", clear_note_item)
+	
+func enable_buttons() -> void:
+	var notes_container = get_node("VBoxContainer")
+	for note in notes_container.get_children():
+		note.disabled = false
+	pass
+
+func clear_note_item(params):
+	for child in notes_list.get_children():
+		print(child)
+		if child.display_text == params:
+			child.queue_free()
+	print("awoo: ", params )
+	pass

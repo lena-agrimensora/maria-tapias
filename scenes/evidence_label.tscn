@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm7vyn6uoeykt"]
+
+[ext_resource type="Script" uid="uid://d3ljn1almft37" path="res://scenes/remove_evidence.gd" id="1_2xlr5"]
+
+[node name="Evidence_Label" type="Label"]
+anchors_preset = -1
+anchor_left = 0.19000001
+anchor_top = 0.485
+anchor_right = 0.91700006
+anchor_bottom = 0.545
+offset_left = -364.80002
+offset_top = -523.8
+offset_right = -364.72473
+offset_bottom = -523.9832
+theme_override_colors/font_color = Color(0, 0, 0.91764706, 1)
+theme_override_font_sizes/font_size = 25
+text = "(Elegir Evidencia del cuaderno de notas)"
+
+[node name="Remove_Ev1" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93600005
+anchor_top = -0.105000004
+anchor_right = 1.0
+anchor_bottom = 0.67300004
+offset_left = -0.23779297
+offset_top = -0.026207924
+offset_right = 1.6490479
+offset_bottom = 0.012756348
+text = "X"
+script = ExtResource("1_2xlr5")
+
+[connection signal="pressed" from="Remove_Ev1" to="Remove_Ev1" method="_on_pressed"]

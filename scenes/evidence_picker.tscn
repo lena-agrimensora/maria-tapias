@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4ld1i5wvhmw7"]
+[gd_scene load_steps=4 format=3 uid="uid://d4ld1i5wvhmw7"]
 
-[ext_resource type="Texture2D" uid="uid://b5rx6fewh3ys4" path="res://assets/evidence picker.png" id="1_2o64w"]
-[ext_resource type="Script" uid="uid://cp7f8u0w4qojv" path="res://scenes/evidence_picker.gd" id="1_unyu2"]
+[ext_resource type="Script" uid="uid://cp7f8u0w4qojv" path="res://scripts/evidence_picker.gd" id="1_unyu2"]
+[ext_resource type="Texture2D" uid="uid://dwrwjqbpxtl37" path="res://assets/note_book_conclusion_page_texture.png" id="2_unyu2"]
+[ext_resource type="Script" uid="uid://dn5pjoyxkd8hi" path="res://scripts/confirm_button.gd" id="3_hb7qg"]
 
 [node name="EvidencePicker" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 194.0
+offset_top = 11.0
+offset_right = 194.0
+offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.0152768)
 script = ExtResource("1_unyu2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -20,26 +26,44 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -366.0
-offset_top = -305.0
-offset_right = 366.0
-offset_bottom = 305.0
+offset_left = -357.0
+offset_top = -470.0
+offset_right = 843.0
+offset_bottom = 1191.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_2o64w")
+scale = Vector2(0.606321, 0.5729983)
+texture = ExtResource("2_unyu2")
+
+[node name="Client_Label" type="Label" parent="CanvasLayer/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42200002
+anchor_top = 0.059000004
+anchor_right = 0.669
+anchor_bottom = 0.113000005
+offset_left = -0.0675354
+offset_top = -0.2674713
+offset_right = 0.4050293
+offset_bottom = 0.7892456
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Rogelio"
 
 [node name="Q_Label" type="Label" parent="CanvasLayer/TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.9990001
-anchor_bottom = 0.09200001
-offset_top = 1.0
-offset_right = -0.2680664
-offset_bottom = -0.12000275
+anchor_left = 0.42700002
+anchor_top = 0.19500001
+anchor_right = 0.97700006
+anchor_bottom = 0.23500001
+offset_left = 0.5296631
+offset_top = 0.71328735
+offset_right = 0.24621582
+offset_bottom = 0.5911255
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "¿Me cubre la obra social los gastos medicos??fffffffff"
-horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="A_Label" type="Label" parent="CanvasLayer/TextureRect"]
@@ -48,56 +72,63 @@ anchors_preset = -1
 anchor_top = 0.16100001
 anchor_right = 0.9990001
 anchor_bottom = 0.38000003
-offset_top = -0.21000671
-offset_right = -0.2680664
-offset_bottom = 0.19998169
+offset_left = 615.1857
+offset_top = 156.664
+offset_right = -54.191772
+offset_bottom = -81.440186
 theme_override_colors/font_color = Color(0.022586571, 0, 1.3294628, 1)
 theme_override_font_sizes/font_size = 32
 text = "Si, definitivamente te cubre el seguro porque..."
 autowrap_mode = 3
 clip_text = true
 
-[node name="Evidence_Label" type="Label" parent="CanvasLayer/TextureRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.068
-anchor_top = 0.321
-anchor_right = 0.84300005
-anchor_bottom = 0.45200002
-offset_left = 0.22399902
-offset_top = 0.18998718
-offset_right = -0.076049805
-offset_bottom = 0.27999878
-theme_override_colors/font_color = Color(0, 0, 0.91764706, 1)
-theme_override_font_sizes/font_size = 25
-text = "(Elegir Evidencia del cuaderno de notas)"
+[node name="Evidence1_Placeholder" type="Label" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 234.1994
+offset_top = 808.03033
+offset_right = 1012.1994
+offset_bottom = 863.03033
+theme_override_colors/font_color = Color(0.15686275, 0.22352941, 0.92941177, 1)
+theme_override_font_sizes/font_size = 40
+text = "(Elegir evidencia del Cuaderno de Notas)"
 
-[node name="Evidence_Label2" type="Label" parent="CanvasLayer/TextureRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.068
-anchor_top = 0.321
-anchor_right = 0.84300005
-anchor_bottom = 0.45200002
-offset_left = 0.22399902
-offset_top = 119.18999
-offset_right = -0.076049805
-offset_bottom = 119.28
-theme_override_colors/font_color = Color(0, 0, 0.91764706, 1)
-theme_override_font_sizes/font_size = 25
-text = "(Elegir Evidencia del cuaderno de notas)"
+[node name="Evidence2_Placeholder" type="Label" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 240.79657
+offset_top = 982.5509
+offset_right = 1018.7966
+offset_bottom = 1037.5509
+theme_override_colors/font_color = Color(0.15686275, 0.22352941, 0.92941177, 1)
+theme_override_font_sizes/font_size = 40
+text = "(Elegir evidencia del Cuaderno de Notas)"
 
-[node name="Evidence_Label3" type="Label" parent="CanvasLayer/TextureRect"]
+[node name="Evidence3_Placeholder" type="Label" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 240.79657
+offset_top = 1165.7975
+offset_right = 1018.7966
+offset_bottom = 1220.7975
+theme_override_colors/font_color = Color(0.15686275, 0.22352941, 0.92941177, 1)
+theme_override_font_sizes/font_size = 40
+text = "(Elegir evidencia del Cuaderno de Notas)"
+
+[node name="Confirm_Button" type="Button" parent="CanvasLayer/TextureRect"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.068
-anchor_top = 0.321
-anchor_right = 0.84300005
-anchor_bottom = 0.45200002
-offset_left = 0.22399902
-offset_top = 229.18999
-offset_right = -0.076049805
-offset_bottom = 229.28
-theme_override_colors/font_color = Color(0, 0, 0.91764706, 1)
-theme_override_font_sizes/font_size = 25
-text = "(Elegir Evidencia del cuaderno de notas)"
+anchor_left = 0.30900002
+anchor_top = 0.80600005
+anchor_right = 0.75200003
+anchor_bottom = 0.88500005
+offset_left = 0.29058838
+offset_top = -0.1932373
+offset_right = -0.23754883
+offset_bottom = -0.5218506
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7335801, 0.3942049, 0.6220363, 1)
+theme_override_font_sizes/font_size = 33
+disabled = true
+text = "Confirmar"
+script = ExtResource("3_hb7qg")
+
+[connection signal="pressed" from="CanvasLayer/TextureRect/Confirm_Button" to="CanvasLayer/TextureRect/Confirm_Button" method="_on_pressed"]

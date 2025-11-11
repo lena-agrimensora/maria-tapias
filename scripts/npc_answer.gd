@@ -3,6 +3,7 @@ class_name NPCAnswer
 
 var evidences          : Array = []
 var npc_answers        : Array = []
+var character_name     : String
 var current_evidence_id: String
 
 @onready var rich_text_label: RichTextLabel = $MarginContainer/RichTextLabel

@@ -1,22 +1,76 @@
 {
-	"player_conclusions": [
-		{
-			"id": "answ_pepe_1",
-			"q_ref": "npc_q_pepe_1",
-			"display_text":"Si, estás cubierto",
-			"is_correct":"true",
-			"right_hints": "Si, el siniestro se dio en el colectivo, 30 minutos antes de ingresar a la fabrica.",
-			"wrong_hints":"Si, estas cubierto....no se bien por qué",
-			"hints":["golpe_cabeza","golpe_colectivo"],
-		},
-		{
-			"id": "answ_pepe_2",
-			"q_ref": "npc_q_pepe_1",
-			"display_text":"Lamentablemente,no.",
-			"is_correct":"false",
-			"right_hints": "",
-			"wrong_hints":"No, no te cubre el seguro. No se bien por qué, no recuerdo todas las leyes",
-			"hints":[],
-		},
-	]
+  "player_conclusions": [
+	{
+	  "id": "answ_eleonora_1",
+	  "q_ref": "npc_q_eleonora_1",
+	  "display_text": "Si, sufriste un accidente laboral",
+	  "is_correct": "true",
+	  "right_hints": "Si, tu accidente ocurrió durante tu viaje hacia la oficina. Se considera un accidente laboral",
+	  "wrong_hints": "Si, fue un accidente....pero no se bien por qué",
+	  "hints": ["horario_trasporte", "Jornada laboral"]
+	},
+	{
+	  "id": "answ_eleonora_2",
+	  "q_ref": "npc_q_eleonora_1",
+	  "display_text": "Accidente si, pero no es laboral",
+	  "is_correct": "false",
+	  "right_hints": "",
+	  "wrong_hints": "No, no fue un accidente laboral. Ni idea por qué",
+	  "hints": []
+	},
+	{
+	  "id": "answ_eleonora_3",
+	  "q_ref": "npc_q_eleonora_2",
+	  "display_text": "Accidente laboral comun y corriente",
+	  "is_correct": "false",
+	  "right_hints": "",
+	  "wrong_hints": "Te golpeaste y eso es suficiente, creo...",
+	  "hints": []
+	},
+	{
+	  "id": "answ_eleonora_4",
+	  "q_ref": "npc_q_eleonora_2",
+	  "display_text": "Accidente laboral In Itinere",
+	  "is_correct": "true",
+	  "right_hints": "Te accidentaste viajando hacia tu lugar de trabajo, dentro del horario correspondiente.",
+	  "wrong_hints": "MMhhh creo que era porque viajaste en colectivo, algo así",
+	  "hints": ["Camino al trabajo", "tiempo_viaje", "golpe_colectivo"]
+	},
+	{
+	  "id": "answ_eleonora_5",
+	  "q_ref": "npc_q_eleonora_3",
+	  "display_text": "La ART, por supuesto...",
+	  "is_correct": "true",
+	  "right_hints": "Recibiste atencion medica y avisaste al trabajo, la ART te va a pagar los gastos",
+	  "wrong_hints": "La ART, no sabría decirte bien por qué...",
+	  "hints": ["Asistencia médica y aviso al trabajo"]
+	},
+	{
+	  "id": "answ_eleonora_6",
+	  "q_ref": "npc_q_eleonora_3",
+	  "display_text": "En este caso, te corresponde a vos",
+	  "is_correct": "false",
+	  "right_hints": "",
+	  "wrong_hints": "No me acuerdo la ley, pero creo que te toca pagar a vos",
+	  "hints": []
+	},
+	{
+	  "id": "answ_eleonora_7",
+	  "q_ref": "npc_q_eleonora_4",
+	  "display_text": "Tu empleador te cubre esos dias",
+	  "is_correct": "true",
+	  "right_hints": "No estabas en condiciones de ir al trabajo. Los primeros 10 dias te cubre el empleador, luego la ART.",
+	  "wrong_hints": "El empleador te paga todo el tiempo que estes accidentada...algo así creo que era...",
+	  "hints": ["golpes", "Lesiones por el accidente"]
+	},
+	{
+	  "id": "answ_eleonora_8",
+	  "q_ref": "npc_q_eleonora_4",
+	  "display_text": "Esos días se te van a descontar",
+	  "is_correct": "false",
+	  "right_hints": "",
+	  "wrong_hints": "No fuiste a trabajar por lo tanto...perdiste para siempre esos días",
+	  "hints": []
+	}
+  ]
 }

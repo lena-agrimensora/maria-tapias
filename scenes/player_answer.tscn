@@ -32,7 +32,7 @@ offset_top = 7.0
 offset_right = -17.012054
 offset_bottom = -8.976006
 theme_override_fonts/font = ExtResource("2_2w2b3")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 35
 text = "test"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

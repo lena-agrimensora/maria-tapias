@@ -1,9 +1,24 @@
 {
-	"evidences": [
-		{
-			"id": "ev_pepe_1",
-			"title": "Selfie en la fabrica",
-			"description": "Una foto de pepe en la puerta de la fabrica, se ve claramente la herida en la cabeza. La hora: 9:02 AM"
-		},
-	]
+  "evidences": [
+	{
+	  "id": "ev_ele_1",
+	  "title": "Jornada laboral",
+	  "description": "'De lunes a viernes de 9h a 17h.'"
+	},
+	{
+	  "id": "ev_ele_2",
+	  "title": "Camino al trabajo",
+	  "description": "'siempre tomo un colectivo en Av. Santa fe. Generalmente el 152, que va directo y me deja cerca. Después camino unas cuadras'"
+	},
+	{
+	  "id": "ev_ele_3",
+	  "title": "Asistencia medica y aviso al trabajo",
+	  "description": "'Vino la policia y una ambulancia que me llevó al Hospital Fernandez... y aproveché a avisarle a mi jefe.'"
+	},
+	{
+	  "id": "ev_ele_4",
+	  "title": "Lesiones por el accidente",
+	  "description": "'...tuve una fractura en el brazo.'"
+	}
+  ]
 }

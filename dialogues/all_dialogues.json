@@ -1,37 +1,38 @@
 {
 	"dialogues": [
 		{
-			"id": "pepe_1",
-			"character": "Pepe",
-			"display_text": "Ese día tomé el transporte a las [b][url=horario_trasporte]8 AM[/url][/b]. Estaba llegando tarde a la [b][url=lugar_trabajo]fabrica de embutidos[/url][/b].",
+			"id": "eleonora_1",
+			"character": "Eleonora",
+			"display_text": "Ese lunes tomé el colectivo a las [b][url=horario_trasporte]8 AM[/url][/b], para ir a trabajar a la [b][url=lugar_trabajo]oficina[/url][/b], que queda en el centro, cerca del obelisco.",
 			"hint_ids": [
 				"horario_trasporte",
 				"lugar_trabajo"
 			]
 		},
 		{
-			"id": "pepe_2",
-			"character": "Pepe",
-			"display_text": "Mi jefe, [b][url=jefe_pepe]Gervasio Palpin[/url][/b] me había llamado la atencion un par de veces. Agarré la [b][url=credencial_trabajo]credencial[/url][/b] y me tome el 99.",
+			"id": "eleonora_2",
+			"character": "Eleonora",
+			"display_text": "Soy secretaria en [b][url=empresa_eleonora]NS consultores[/url][/b]. Me encargo de gestionar el trato con los clientes de interior del país. Ese día llevé mi [b][url=notebook]notebook[/url][/b] para trabajar mejor.",
 			"hint_ids": [
-				"jefe_pepe",
-				"credencial_trabajo"
+				"empresa_eleonora",
+				"notebook"
 			]
 		},
 		{
-			"id": "pepe_3",
-			"character": "Pepe",
-			"display_text": "El viaje venia tranquilo pero a la altura de Segurola y Juan B justo sentimos[b][url=golpe_colectivo] un golpe contra el colectivo[/url][/b].",
+			"id": "eleonora_3",
+			"character": "Eleonora",
+			"display_text": "Iba en el 152 como todos los dias. El viaje era complicado por el trásito, pero es normal que tarde [b][url=tiempo_viaje]40 minutos[/url][/b] desde mi casa. A la altura de Santa Fe y Pueyrredón el chofer frenó bruscamente y sentimos un [b][url=golpe_colectivo]golpe contra el colectivo[/url][/b].",
 			"hint_ids": [
-				"golpe_colectivo"
+				"golpe_colectivo",
+              "tiempo_viaje"
 			]
 		},
 		{
-			"id": "pepe_4",
-			"character": "Pepe",
-			"display_text": "Me golpee la [b][url=golpe_cabeza] CABEZA [/url][/b].",
+			"id": "eleonora_4",
+			"character": "Eleonora",
+			"display_text": "Con el choque me fui para adelante y me golpeé la [b][url=golpes]cabeza y el brazo[/url][/b]. Después del accidente me llevaron al hospital. Me diagnosticaron conmoción cerebral leve y una fractura en el brazo.",
 			"hint_ids": [
-				"golpe_cabeza"
+				"golpes"
 			]	
 		}
 	]

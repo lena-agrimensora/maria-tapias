@@ -1,19 +1,30 @@
 {
-	"npc_questions": 
-		{
-		"Pepe": [
-				{
-					"id": "npc_q_pepe_1",
-					"text_desc": "¿Me cubre el seguro los gastos medicos?",
-					"answer": "true",
-					"hint":"golpe_cabeza"
-					},
-					{
-					"id": "npc_q_pepe_2",
-					"text_desc": "¿igualmente deberia ir a trabajar mañana?",
-					"answer": "false",
-					"hint":"golpe_cabeza"
-					}
-		]
-	}
+  "npc_questions": {
+	"Eleonora": [
+	  {
+		"id": "npc_q_eleonora_1",
+		"text_desc": "¿Lo que me pasó fue un accidente laboral?",
+		"answer": "true",
+		"hints": ["horario_trasporte", "Jornada laboral"]
+	  },
+	  {
+		"id": "npc_q_eleonora_2",
+		"text_desc": "El accidente.. lo que me pasó..¿De qué tipo es?",
+		"answer": "true",
+		"hints": ["Camino al trabajo", "tiempo_viaje", "golpe_colectivo"]
+	  },
+	  {
+		"id": "npc_q_eleonora_3",
+		"text_desc": "Y los gastos medicos, todo el tratamiento..¿Quién debería hacerse cargo?",
+		"answer": "true",
+		"hints": ["Asistencia medica y aviso al trabajo"]
+	  },
+	  {
+		"id": "npc_q_eleonora_4",
+		"text_desc": "Los días que no fui a trabajar ¿Me los van a descontar?",
+		"answer": "true",
+		"hints": ["golpes", "Lesiones por el accidente"]
+	  }
+	]
+  }
 }

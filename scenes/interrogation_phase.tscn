@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cxkrd0y8ajxoh" path="res://scripts/game_manager.gd" id="1_o8ctr"]
 [ext_resource type="Script" uid="uid://bhfnsmhlq4iik" path="res://scripts/qa_manager.gd" id="2_2ilrk"]
 [ext_resource type="Texture2D" uid="uid://dbyhwg5e3s4q2" path="res://assets/mock_oficina.png" id="3_5xsd8"]
-[ext_resource type="Texture2D" uid="uid://d1o4n6bmi5yxi" path="res://assets/trabajador.png" id="4_ksv34"]
+[ext_resource type="Texture2D" uid="uid://rvlhbtlk2n4q" path="res://assets/eleonora.png" id="4_qy6yg"]
 [ext_resource type="PackedScene" uid="uid://dekjs3wsbsvu0" path="res://scenes/phase_container.tscn" id="7_hdqay"]
 [ext_resource type="PackedScene" uid="uid://cxqspj1dk7q4t" path="res://scenes/next_phase.tscn" id="7_qy6yg"]
 [ext_resource type="Script" uid="uid://tjpk80306wsh" path="res://scripts/phase_container.gd" id="8_1jsxm"]
@@ -16,18 +16,19 @@ phase_name = "Interrogation"
 
 [node name="Q&AManager" type="Node" parent="."]
 script = ExtResource("2_2ilrk")
-character_name = "Pepe"
+character_name = "Eleonora"
 
 [node name="MockOficina" type="Sprite2D" parent="."]
 position = Vector2(966, 544)
 texture = ExtResource("3_5xsd8")
 
-[node name="Trabajador" type="Sprite2D" parent="."]
-position = Vector2(1037.0001, 679)
-scale = Vector2(0.99114585, 0.98888886)
-texture = ExtResource("4_ksv34")
+[node name="Eleonora" type="Sprite2D" parent="."]
+position = Vector2(999, 775.00006)
+scale = Vector2(1.2061856, 1.2156863)
+texture = ExtResource("4_qy6yg")
 
 [node name="PhaseContainer" parent="." instance=ExtResource("7_hdqay")]
+visible = false
 position = Vector2(5, 6)
 script = ExtResource("8_1jsxm")
 phase_name = "Fase de Interrogación"

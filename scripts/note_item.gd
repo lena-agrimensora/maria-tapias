@@ -3,6 +3,7 @@ class_name NoteItem
 
 @export var display_text: String
 @export var tooltip_txt: String
+@export var id: String
 
 var tooltip_label: Label
 var tooltip_bg: ColorRect
@@ -73,7 +74,10 @@ func _on_pressed() -> void:
 		
 		for label in labels:
 			print(label.name)
-			if label.name.begins_with("Evidence") and label.text == "(Elegir evidencia del Cuaderno de Notas)" and label.visible:
+			if label.name.begins_with("Evidence") and (label.text == "(Elegir evidencia del Cuaderno de Notas)" or label.text == null):
+				label.text = display_text
+				var ref_to_send = {"id":id,"display_text": display_text, "tooltip": tooltip_txt}
+				evidence_picker.evidence_selected = ref_to_send
 				evidence_picker.instantiate_evidence(label.name, display_text)
 				note_item_pressed.emit(display_text)
 				if(evidence_picker.confirm_button.visible == false):

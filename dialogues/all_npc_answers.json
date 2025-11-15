@@ -1,25 +1,32 @@
 {
-	"NPC_Answers": 
-	[
+  "NPC_Answers": [
+	{
+	  "Eleonora": [
 		{
-			"Pepe": [
-				{
-					"id": "ans_pepe_1",
-					"question_id": "q_pepe_1",
-					"display_text": "Estaba laburando como corresponde. De hecho mirá aca en el Whatsapp tengo una[b] selfie que le mande a mi señora en el trabajo justo a esa hora[/b]",
-					"evidence": "ev_pepe_1"
-				},
-				{
-					"id": "ans_pepe_2",
-					"question_id": "q_pepe_2",
-					"display_text": "Bien, relativamente tranquilas. La mitad de la planta estaba en el comedor festejando el cumpleaños de Pablito el chico nuevo.",
-				},
-				{
-					"id": "ans_pepe_3",
-					"question_id": "q_pepe_3",
-					"display_text": "Si, ni bien llegue cruzamos miradas en la cocina. Vio que tenia la cabeza lastimada y se dio vuelta enseguida",
-				}
-			]
+		  "id": "ans_ele_1",
+		  "question_id": "q_ele_1",
+		  "display_text": "De lunes a viernes de 9h a 17h.",
+		  "evidence": "ev_ele_1"
+		},
+		{
+		  "id": "ans_ele_2",
+		  "question_id": "q_ele_2",
+		  "display_text": "Si, siempre tomo un colectivo en Av. Santa fe. Generalmente el 152, que va directo y me deja cerca. Después camino unas cuadras hasta la oficina.",
+		  "evidence": "ev_ele_2"
+		},
+		{
+		  "id": "ans_ele_3",
+		  "question_id": "q_ele_3",
+		  "display_text": "Vino la policia y una ambulancia que me llevó al Hospital Fernandez. Ahí me atendieron bastante rápido por suerte, y aproveché a avisarle a mi jefe.",
+		  "evidence": "ev_ele_3"
+		},
+		{
+		  "id": "ans_ele_4",
+		  "question_id": "q_ele_4",
+		  "display_text": "Si. Además del golpearme la cabeza, tuve una fractura en el brazo. Así que no fuí a trabajar varias semanas.",
+		  "evidence": "ev_ele_4"
 		}
-	]
+	  ]
+	}
+  ]
 }

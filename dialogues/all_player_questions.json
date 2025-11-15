@@ -1,22 +1,31 @@
 {
 	"player_questions": [
 		{
-			"id": "q_pepe_1",
-			"character": "Pepe",
-			"display_text": "¿Donde estabas a las 9 am?",
-			"answer_id": "ans_pepe_1"
-		},
-		{
-			"id": "q_pepe_2",
-			"character": "Pepe",
-			"display_text": "¿Como estaban las cosas en la fabrica ese dia?",
-			"answer_id": "ans_pepe_2"
-		},
-		{
-			"id": "q_pepe_3",
-			"character": "Pepe",
-			"display_text": "¿Tu jefe te vió llegar?",
-			"answer_id": "ans_pepe_3"
+			"id": "q_ele_1",
+			"character": "Eleonora",
+			"display_text": "¿Cuál es tu horario de trabajo?",
+			"answer_id": "ans_ele_1"
+		}
+	  ,
+	  {
+			"id": "q_ele_2",
+			"character": "Eleonora",
+			"display_text": "¿Viajaste por el camino que usas siempre?",
+			"answer_id": "ans_ele_2"
+		}
+	  ,
+	  {
+			"id": "q_ele_3",
+			"character": "Eleonora",
+			"display_text": "¿Qué pasó después del choque?",
+			"answer_id": "ans_ele_3"
+		}
+	  ,
+	  {
+			"id": "q_ele_4",
+			"character": "Eleonora",
+			"display_text": "Tras el accidente. ¿Tuviste que faltar al trabajo?",
+			"answer_id": "ans_ele_4"
 		}
 	]
 }

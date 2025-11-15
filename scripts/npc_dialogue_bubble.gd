@@ -19,7 +19,7 @@ var next_button       : Button
 var prev_button       : Button
 
 func _ready():
-	character_name = "Pepe"
+	character_name = "Eleonora"
 	#TODO: Obtener todos los dialogos 
 	character_dialogues = dialogue_manager.get_all_dialogues_by_character_name(character_name)
 	rich_text_label.bbcode_enabled = true

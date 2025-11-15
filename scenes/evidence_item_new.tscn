@@ -22,11 +22,11 @@ script = ExtResource("1_gx4qs")
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.83400005
-anchor_bottom = 0.69000006
+anchor_right = 0.99300003
+anchor_bottom = 1.0
 offset_top = -1.0
-offset_right = 2396.1792
-offset_bottom = 633.2047
+offset_right = 2852.0156
+offset_bottom = 931.1566
 scale = Vector2(0.20000058, 0.20000058)
 
 [node name="EvidenceBackground" type="Sprite2D" parent="HBoxContainer"]

@@ -43,7 +43,6 @@ func _ready() -> void:
 			
 	render_player_questions(questions)
 
-
 func render_player_questions(questions_arr: Array) -> void:
 	var texture_rect = question_box_instance.get_node("TextureRect")
 
@@ -79,12 +78,9 @@ func render_player_questions(questions_arr: Array) -> void:
 	next_button.visible = (end_index < questions_arr.size())
 	prev_button.visible = (current_page > 0)
 
-
-
 func handle_question_invoked(question_id: String) -> void:
 	for child in get_children():
 		if child is NPCAnswer:
-			print("adios")
 			child.queue_free()
 			break
 
@@ -98,18 +94,13 @@ func handle_question_invoked(question_id: String) -> void:
 		next_button_scene.next_scene = next_scene
 		next_button_scene.label_text = "Ir a fase de Conclusión"
 		next_button_scene.visible = true
-		print("mostrar sig fase")
-
 
 func on_next_button_pressed() -> void:
 	if current_page * questions_per_page + questions_per_page < questions.size():
 		current_page += 1
 		render_player_questions(questions)
-		print("Mostrando página ", current_page + 1)
-
 
 func on_prev_button_pressed() -> void:
 	if current_page > 0:
 		current_page -= 1
 		render_player_questions(questions)
-		print("Volviendo a página ", current_page + 1)

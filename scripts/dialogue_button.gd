@@ -9,5 +9,5 @@ func _on_pressed() -> void:
 	if npc_dialogue_bubble != null:
 		npc_dialogue_bubble._on_button_pressed(button_type)
 	else:
-		print("No hay globo de dialogo instanciado")
+		return
 	pass

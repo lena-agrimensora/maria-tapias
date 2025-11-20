@@ -59,8 +59,6 @@ func enable_buttons() -> void:
 
 func clear_note_item(params):
 	for child in notes_list.get_children():
-		print(child)
 		if child.display_text == params:
 			child.queue_free()
-	print("awoo: ", params )
 	pass

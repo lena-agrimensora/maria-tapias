@@ -29,7 +29,6 @@ func setup (q_text: String, a_text: String, char_name: String) -> void:
 	pass
 
 func instantiate_evidence(label_name_ref: String, label_text: String):
-	print("Recibí increíble: ", label_name_ref)
 	
 	var ev_label_instance = ev_label_scene.instantiate()
 	

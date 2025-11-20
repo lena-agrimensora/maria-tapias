@@ -5,10 +5,10 @@ extends Button
 
 @onready var notes_panel = get_node("/root/NotesPanel")
 
-var evidence_id     : String
-var evidence_desc   : String
-var evidence_tooltip: String
-var placeholder_ref: String
+var evidence_id      : String
+var evidence_desc    : String
+var evidence_tooltip : String
+var placeholder_ref  : String
 
 func setup(ref: Dictionary):
 	evidence_id = ref.id
@@ -31,14 +31,11 @@ func _on_pressed() -> void:
 	
 	if evidence_id in evidence_picker.selected_evidence_ids:
 		evidence_picker.selected_evidence_ids.erase(evidence_id)
-	
-	
+		
 	call_deferred("set_disabled", true)
-	
-	
+		
 	if ev_label.get_parent():
 		ev_label.get_parent().call_deferred("remove_child", ev_label)
 		ev_label.call_deferred("queue_free")
-	
 	
 	notes_panel.add_note(ref_note, true)

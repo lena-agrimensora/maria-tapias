@@ -42,11 +42,9 @@ func render_npc_answer(q_id: String, character_name: String) -> void:
 
 	await get_tree().create_timer(5.0).timeout
 
-	print("Hora de eliminar el globo de diálogo")
 	self.queue_free()
 
 func instantiate_evidence_item(evidence_id: String) -> Button:
-	print("Deberia instanciar una evidencia con: ", evidence_id)
 	for evidence in evidences:
 		if evidence.id == evidence_id:
 			var evidence_instance = evidence_item.instantiate()

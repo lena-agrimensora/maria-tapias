@@ -36,13 +36,10 @@ func load_dialogues():
 		if data == OK:
 			#TODO: no solo pushear los dialogos, crear un Dialogue con cada uno y LUEGO pushear
 			all_dialogues = json.get_data()["dialogues"]
-			print("-----Listo. Sustanciosos dialogos: ", all_dialogues)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de diálogos")
 		pass
 
 func load_hints():
@@ -54,13 +51,10 @@ func load_hints():
 		if data == OK:
 			#TODO: no solo pushear las hints, crear un Dialogue con cada uno y LUEGO pushear
 			all_hints = json.get_data()["hints"]
-			print("-----Listo. Sustanciosas pistas: ", all_hints)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de pistas")
 		pass
 	pass
 
@@ -73,13 +67,10 @@ func load_evidences():
 		if data == OK:
 			#TODO: no solo pushear las hints, crear un Dialogue con cada uno y LUEGO pushear
 			all_evidences = json.get_data()["evidences"]
-			print("-----Listo. Evidencias: ", all_evidences)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de pistas")
 		pass
 	pass
 
@@ -92,13 +83,10 @@ func load_player_questions():
 		if data == OK:
 			#TODO: no solo pushear las hints, crear un Dialogue con cada uno y LUEGO pushear
 			all_player_questions = json.get_data()["player_questions"]
-			print("-----Listo. Preguntas jugador: ", all_player_questions)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de pistas")
 		pass
 	pass
 
@@ -110,13 +98,10 @@ func load_npc_answers():
 		var data = json.parse(json_data)
 		if data == OK:
 			all_npc_answers = json.get_data()["NPC_Answers"]
-			print("-----Listo. Respuestas NPCs: ", all_npc_answers)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de pistas")
 		pass
 	pass
 
@@ -128,13 +113,10 @@ func load_npc_questions():
 		var data = json.parse(json_data)
 		if data == OK:
 			all_npc_questions = json.get_data()["npc_questions"]
-			print("-----Listo. Preguntas NPCs: ", all_npc_questions)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de preguntas NPC")
 		pass
 	pass
 
@@ -146,12 +128,9 @@ func load_player_conclusions():
 		var data = json.parse(json_data)
 		if data == OK:
 			all_player_conclusions = json.get_data()["player_conclusions"]
-			print("-----Listo. conclusiones jugador: ", all_player_conclusions)
 			pass
 		else:
-			print("MMM:", json.get_error_message())
 			pass
 	else:
-		print("Error al abrir el archivo de conclusiones del jugador.")
 		pass
 	pass

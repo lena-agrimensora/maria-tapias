@@ -39,7 +39,6 @@ func _on_meta_clicked(meta: String) -> void:
 			break
 
 	if ref == null:
-		print("No hay hint con id:", meta)
 		return
 	
 	
@@ -47,9 +46,7 @@ func _on_meta_clicked(meta: String) -> void:
 	await get_tree().create_timer(0.3).timeout
 
 func _on_button_pressed(type: String) -> void:
-	print(type)
 	if type == "Next":
-		#TODO: Validar fuera de rango :3
 		current_dialogue_index = current_dialogue_index+1
 		if(current_dialogue_index == character_dialogues.size()-1):
 			next_phase_button.next_scene = "res://scenes/interrogation_phase.tscn"

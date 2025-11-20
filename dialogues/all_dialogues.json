@@ -21,7 +21,7 @@
 		{
 			"id": "eleonora_3",
 			"character": "Eleonora",
-			"display_text": "Iba en el 152 como todos los dias. El viaje era complicado por el trásito, pero es normal que tarde [b][url=tiempo_viaje]40 minutos[/url][/b] desde mi casa. A la altura de Santa Fe y Pueyrredón el chofer frenó bruscamente y sentimos un [b][url=golpe_colectivo]golpe contra el colectivo[/url][/b].",
+			"display_text": "Iba en el 152 como todos los dias. El viaje era complicado por el trásito, pero es normal que tarde [b][url=tiempo_viaje] 40 minutos[/url][/b] desde mi casa. A la altura de Santa Fe y Pueyrredón el chofer frenó bruscamente y sentimos un [b][url=golpe_colectivo]golpe contra el colectivo[/url][/b].",
 			"hint_ids": [
 				"golpe_colectivo",
               "tiempo_viaje"

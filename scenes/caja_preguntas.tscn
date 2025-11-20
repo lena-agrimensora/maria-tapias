@@ -91,7 +91,7 @@ offset_left = -0.5299072
 offset_top = -0.010055542
 offset_right = 0.26904297
 offset_bottom = 0.21017456
-text = "siguiente->"
+text = "->"
 
 [node name="prev_button" type="Button" parent="TextureRect"]
 visible = false
@@ -105,7 +105,7 @@ offset_left = -811.0036
 offset_top = -0.010055542
 offset_right = -810.20465
 offset_bottom = 0.21017456
-text = "<- anterior
+text = "<-
 "
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]

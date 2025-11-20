@@ -42,7 +42,6 @@ func _process(delta: float) -> void:
 		tooltip_bg.position = mouse_pos + offset
 
 func _on_button_hovered() -> void:
-	print("Tooltip text: ", tooltip_txt)
 	self.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 
 	if !tooltip_active:
@@ -67,13 +66,10 @@ func _hide_tooltip() -> void:
 func _on_pressed() -> void:
 	var evidence_picker = get_node("/root/EvidencePicker")
 	if evidence_picker:
-		print("Increíble, puedo pingear ", evidence_picker)
-		print("test: ", display_text)
 		
 		var labels = evidence_picker.get_node("CanvasLayer/TextureRect").get_children()
 		
 		for label in labels:
-			print(label.name)
 			if label.name.begins_with("Evidence") and (label.text == "(Elegir evidencia del Cuaderno de Notas)" or label.text == null):
 				label.text = display_text
 				var ref_to_send = {"id":id,"display_text": display_text, "tooltip": tooltip_txt}

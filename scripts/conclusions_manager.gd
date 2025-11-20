@@ -61,20 +61,11 @@ func render_player_options(question_id: String) -> void:
 func handle_player_response(args: Array) -> void:
 	current_player_conclusion = args
 	var display_answer = args[3]
-	if args[1] == current_question.id and args[2] == "true":
-		instantiate_evaluator_panel(current_question.text_desc, display_answer)
-	elif args[1] == current_question.id and args[2] == "false":
-		instantiate_evaluator_panel(current_question.text_desc, display_answer)
-		print("NOOO re mal la respuesta")
+	instantiate_evaluator_panel(current_question.text_desc, display_answer)
 	pass
 
 func instantiate_evaluator_panel(q_text: String, a_text: String) -> void:
-	var npc_bubble   = get_node("/root/Main/ConclusionsManager/CanvasLayer")
-	var player_answ  = get_node("/root/Main/PlayerAnswer")
-	var player_answ2 = get_node("/root/Main/PlayerAnswer2")
-	npc_bubble.queue_free()
-	player_answ.hide()
-	player_answ2.hide()
+	clear_ui_elements()
 	var ev_picker_instance = evidence_picker_panel.instantiate()
 	get_tree().root.add_child(ev_picker_instance)
 	ev_picker_instance.setup(q_text, a_text, character_name)
@@ -84,33 +75,20 @@ func handle_player_conclusions(args: Array):
 	var conclusion_feedback_instance = conclusion_feedback_panel.instantiate()
 	var label_text = conclusion_feedback_instance.get_node("Label")
 	
-	print("ok, llegue con: ", args)
 	if current_question.answer == "true" and current_player_conclusion[2] == "true":
-		var correct_hints = current_question.hints.duplicate()		
-		correct_hints.sort()
-		var selected_hints = args.duplicate()
-		selected_hints.sort()
-		if correct_hints == selected_hints:
-			label_text.text = current_player_conclusion[4]
-			player_score += 25
-		else:
-			label_text.text = current_player_conclusion[5]
-			player_score += 15
+		calculate_score(args,label_text)
 	elif current_question.answer == "true" and current_player_conclusion[2] == "false" or current_question.answer == "false" and current_player_conclusion[2] == "true" :
 		label_text.text = current_player_conclusion[5]
 	
 	self.add_child(conclusion_feedback_instance)
-
 	
 	var timer = Timer.new()
 	self.add_child(timer)
 	timer.wait_time = 7.0
 	timer.one_shot = true
 	timer.start()
-
 	
 	timer.connect("timeout", Callable(self, "_on_feedback_timeout").bind(conclusion_feedback_instance))
-
 
 func _on_feedback_timeout(conclusion_feedback_instance: Node) -> void:
 	var evaluator_panel = get_node("/root/EvidencePicker")
@@ -128,4 +106,23 @@ func _on_feedback_timeout(conclusion_feedback_instance: Node) -> void:
 		var score_label = score_panel_inst.get_node("Label")
 		score_label.text = "Gracias por jugar! Tu puntaje: " + str(player_score) + " /100"
 		get_tree().root.add_child(score_panel_inst)
-		print("Fin del diálogo o no más preguntas disponibles.")
+
+func clear_ui_elements() -> void:
+	var npc_bubble   = get_node("/root/Main/ConclusionsManager/CanvasLayer")
+	var player_answ  = get_node("/root/Main/PlayerAnswer")
+	var player_answ2 = get_node("/root/Main/PlayerAnswer2")
+	npc_bubble.queue_free()
+	player_answ.hide()
+	player_answ2.hide()
+
+func calculate_score(args: Array, labeltxt: Label) -> void:
+	var correct_hints = current_question.hints.duplicate()	
+	correct_hints.sort()
+	var selected_hints = args.duplicate()
+	selected_hints.sort()
+	if correct_hints == selected_hints:
+		labeltxt.text = current_player_conclusion[4]
+		player_score += 25
+	else:
+		labeltxt.text = current_player_conclusion[5]
+		player_score += 15

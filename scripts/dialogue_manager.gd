@@ -9,7 +9,6 @@ func _ready() -> void:
 	dialogues = Dialogue_Loader.all_dialogues
 	hint_references = Dialogue_Loader.all_hints
 	npc_answers = Dialogue_Loader.all_npc_answers
-	print("Tengo todos los dialogos desde el Manager: ", dialogues)
 	pass
 
 #TODO: return type que sea Dialogue
@@ -23,7 +22,6 @@ func render_dialogue(id: String, rich_text_label: RichTextLabel) -> void:
 
 	
 	if dialogue_candidate == null:
-		print("Lamentablemente no existe el id: ", id)
 		return 
 
 	
@@ -50,7 +48,6 @@ func get_hints_by_dialogue_id(dialogue_id: String) -> Array:
 			break
 
 	if found_dialogue == null:
-		print("Diálogo no encontrado con id: ", dialogue_id)
 		return []
 
 	var hint_ids = found_dialogue.get("hint_ids", [])
@@ -65,7 +62,7 @@ func get_hints_by_dialogue_id(dialogue_id: String) -> Array:
 		if found_hint:
 			hints.append(found_hint)
 		else:
-			print("Hint no encontrado para ID: ", hint_id)
+			pass
 
 	return hints
 
@@ -74,5 +71,4 @@ func get_all_dialogues_by_character_name(character_name: String)-> Array:
 	for dialogue in dialogues:
 		if dialogue["character"] == character_name:
 			dialogues_arr.append(dialogue)
-		print("dialogue: ", dialogue)
 	return dialogues_arr
